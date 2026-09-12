@@ -99,3 +99,34 @@ Notes from Class:
 * (int) -> str
 * (string) -> integer
 * (integer) -> string
+
+* def count_vowels(word: str) -> int:
+*     """Count the vowels in the string.
+*     """
+* Identify the problem(s) with the Description in the docstring above.
+* It doesn't say what the function returns. - correct
+* It's too short.
+* It doesn't mention the type of the parameter.
+* It doesn't mention the parameter by name. - correct
+* 
+* Assume you already have a function convert_to_celsius. That function has one parameter representing a temperature in Fahrenheit and returns that temperature in Celsius. In the same file, we define another function:
+* def colder_temperature(temp1: float, temp2: float) -> float:
+*     """Return the colder of the two temperatures, temp1 (degrees Celsius)
+*     and temp2 (degrees Fahrenheit), in degrees Celsius.
+*     """
+* Which of the following is the best choice for the function body?
+* temp2_celsius = convert_to_celsius(temp2)
+* return min(temp1, temp2_celsius)
+* correct cause the temp 1 is already in celsius
+* 
+* Select the code fragment(s) that result in a SyntaxError.
+* "He said, "Yes!"" - incorrect
+* '"Once upon a time...", she said.'
+* '3\' - incorrect
+* 'That\'s okay'
+* 
+* What is the first step of the Design Recipe?
+* Header
+* Test
+* Examples - correct
+* Code

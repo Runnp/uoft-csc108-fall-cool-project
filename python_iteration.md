@@ -53,3 +53,18 @@ Notes from Class:
 * 3
 * 3.0
 * a - correct, even stays, but if odd it increases
+
+* 
+* Syntax
+*  a, b = b, a 
+* will swap the variables all in one line
+* 
+* Consider this code:
+* apple = banana When the code above is executed, what type of error occurs?
+* SyntaxError
+* NameError
+* 
+* Consider this code:
+*  '5' + 5 
+* When the code above is executed, what type of error occurs?
+* TypeError

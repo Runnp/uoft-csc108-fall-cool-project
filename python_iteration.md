@@ -68,3 +68,34 @@ Notes from Class:
 *  '5' + 5 
 * When the code above is executed, what type of error occurs?
 * TypeError
+
+* 
+* Which of the following is an appropriate definition for the function double that returns two times the number it is passed?
+* def double(x):
+*     return 2 * x
+* 
+* grade = 80
+* not (grade >= 50) - not true - false
+* also not (grade < 50) works
+* 
+* When history_grade is 85, gives a True statement because we have or, either one side if true makes the whole expression true 
+* (math_grade > 50) or (history_grade > 50)
+* 
+* Consider this expression: ‘ba’+ ‘na’ * 2 + ‘muffin’. What does it evaluate to?
+* ‘bana2muffin’
+* ‘bananamuffin’ - correct, since * 2 means “nana”
+* 
+* print(str(1), 'st love') - 1 st love
+* Comma will result in a space
+* 
+* print('What\'s up?\nDoc')
+* What's up?
+* Doc
+* 
+* From input(), the data you receive is always in str unless you did not convert
+* 
+* The Type Contract describes the types of the parameters and return value. Select the correct Type Contract for this function.
+* (str) -> int - correct
+* (int) -> str
+* (string) -> integer
+* (integer) -> string

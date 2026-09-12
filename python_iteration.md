@@ -37,3 +37,19 @@ print(str(num))
 Boolean:
 isCool = True
 
+
+Notes from Class:
+* 
+* What value does round(1234.5678, -2) produce?
+* 1235
+* 1200
+* 1200.0 - c
+* 1235.0
+* c - correct
+* 
+* What value does round(2.5) produce?
+* 2 - a
+* 2.0
+* 3
+* 3.0
+* a - correct, even stays, but if odd it increases

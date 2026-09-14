@@ -130,3 +130,21 @@ Notes from Class:
 * Test
 * Examples - correct
 * Code
+* 
+* What is the last step of the Design Recipe?
+* Code
+* Header
+* Test - correct
+* Examples
+* 
+* print("A\t1")
+* A 1
+* print("B\t2")
+* B 2
+* /t acts like a one space place
+* 
+* print("\"I am a slow walker, but I never walk back.\" - Abe Lincoln")
+* "I am a slow walker, but I never walk back." - Abe Lincoln
+* 
+* print("You say, \"Goodbye\", I say, \"Hello\"")
+* You say, "Goodbye", I say, "Hello"

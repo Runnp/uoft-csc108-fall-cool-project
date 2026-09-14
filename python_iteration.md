@@ -148,3 +148,19 @@ Notes from Class:
 * 
 * print("You say, \"Goodbye\", I say, \"Hello\"")
 * You say, "Goodbye", I say, "Hello"
+* print("Hello ALIEN!".lower())
+* hello alien!
+* 
+* a = "Hello".upper()
+* b = "WoRlD".lower()
+* print(a + " " + b + "!")
+* HELLO world! - output
+* 
+* a = "Hello ".strip()
+* b = " world!".strip()
+* print(a + b)
+* Helloworld! - output
+* 
+* Just reloading the website oftentimes helps to read the code:
+* def format_name(first_name: str, last_name: str) -> str:    
+*     return(last_name + ", " + first_name)

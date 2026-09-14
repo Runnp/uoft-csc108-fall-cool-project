@@ -164,3 +164,13 @@ Notes from Class:
 * Just reloading the website oftentimes helps to read the code:
 * def format_name(first_name: str, last_name: str) -> str:    
 *     return(last_name + ", " + first_name)
+* 
+* def to_listing(first_name: str, last_name: str, num: str) -> str:
+*     """Return a string in the format "LAST_NAME, 
+*     FIRST_NAME: PHONE_NUMBER", where LAST_NAME, FIRST_NAME, and 
+*     PHONE_NUMBER are replaced by last_name, first_name, and num.
+* 
+*     >>> to_listing('David', 'Cohen', '12345')
+*     'Cohen, David: 12345'
+*     """
+*     return format_name(first_name, last_name) + ": " + num # Implement your function here.

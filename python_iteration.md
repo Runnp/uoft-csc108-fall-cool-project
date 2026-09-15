@@ -202,3 +202,13 @@ result = min(data, data2)
 * an argument
 * a function name
 * The correct answer is an argument
+* 
+* 14/09/26
+* Lecture Notes
+* Test is October 1st
+* True is a type of Boolean
+* True + 1, Boolean is a subclass
+* Results in 2 = 1 + 1
+* bool(8) - True
+* bool(-100.25) - True
+* bool(0) - False

@@ -243,3 +243,17 @@ result = min(data, data2)
 * True - False or True - True and False - False - False or False - False or True
 * The “and” is in higher priority than “or”
 * False and False, you do not have to look at all other things after and it will do Lazy Evaluation and give you False
+* 
+* Hand Tracing
+* True
+* True
+* True and True - True
+* 
+* Simplify
+* not(b or not a or not b) - for Wednesday
+* 
+* b or not a
+* not a or not b ‎ =  not (a and b)
+* b or not (a and b)
+* 
+* not(b or not (a and b))

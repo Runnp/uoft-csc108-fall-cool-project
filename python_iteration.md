@@ -174,3 +174,21 @@ Notes from Class:
 *     'Cohen, David: 12345'
 *     """
 *     return format_name(first_name, last_name) + ": " + num # Implement your function here.
+* * 12/09/26
+* Select the legal Python name(s) below.
+happy_day
+happy!day?
+18happy_day
+happy_45day
+* 1, 4 are correct
+* You cannot start a variable with a number
+* 
+* Consider this code:
+
+round(45.342, 2)
+What value does the expression above produce?
+* 45.342
+* 45.34
+* 45.3
+* 45
+* The correct answer is 45.34, the number 2 in the brackets means how many digits we are leaving after a period

@@ -224,3 +224,22 @@ result = min(data, data2)
 * a and b and c, if a is true, b is false, but c is not reached
 * There is no point of calculating it since it does not get to c, it stops at b
 * a or b or c, where a is false, b is true, it will not reach c still but it will be true because of b
+
+* 
+* True or 1/0 - will return True even if 1/0 is Error
+* False or 1/0 - ZeroDivisionError
+* True or ahahhaahhaha - will do Lazy Evaluation and return True
+* True or ! - will return SyntaxError: invalid syntax because of “!”
+* 
+* True or False or False
+* (True or False) and False - order of operation
+* 
+* True
+* False
+* True
+* False
+* 
+* False - False and True
+* True - False or True - True and False - False - False or False - False or True
+* The “and” is in higher priority than “or”
+* False and False, you do not have to look at all other things after and it will do Lazy Evaluation and give you False

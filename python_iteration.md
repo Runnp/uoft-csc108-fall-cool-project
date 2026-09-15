@@ -192,3 +192,13 @@ What value does the expression above produce?
 * 45.3
 * 45
 * The correct answer is 45.34, the number 2 in the brackets means how many digits we are leaving after a period
+* Consider this code:
+
+data = 3
+data2 = 7.5
+result = min(data, data2)
+ Select the phrase that describes data in the third line.
+* a parameter
+* an argument
+* a function name
+* The correct answer is an argument

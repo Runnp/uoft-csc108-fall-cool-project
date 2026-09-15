@@ -212,3 +212,15 @@ result = min(data, data2)
 * bool(8) - True
 * bool(-100.25) - True
 * bool(0) - False
+
+* De Morgan’s Laws
+* not(a and b) ‎ = = not a or not b
+* You do not draw only overlap, between a and b
+* 
+* not(a or b) ‎ = = not a and not b
+* You draw everything except the two circles and overlap
+* 
+* Short Circuits
+* a and b and c, if a is true, b is false, but c is not reached
+* There is no point of calculating it since it does not get to c, it stops at b
+* a or b or c, where a is false, b is true, it will not reach c still but it will be true because of b

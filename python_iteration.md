@@ -257,3 +257,5 @@ result = min(data, data2)
 * b or not (a and b)
 * 
 * not(b or not (a and b))
+
+

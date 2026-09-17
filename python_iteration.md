@@ -258,4 +258,21 @@ result = min(data, data2)
 * 
 * not(b or not (a and b))
 
-
+* 
+* Simplify
+* not(b or not a or not b) - for Wednesday
+* not( (b or not a) or (not b) )
+* not(b or not a) and not (not b) - flip or to and
+* not(not b) - it is b
+* not b and not (not a) and b
+* not b and a and b
+* a and b and not b
+* a and False
+* Therefore, False
+* 
+* not(b or not (a and b))
+* not b and not(not(a and b))
+* not b and (a and b)
+* a and b and not b
+* b and not b
+* Therefore, False

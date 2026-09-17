@@ -276,3 +276,17 @@ result = min(data, data2)
 * a and b and not b
 * b and not b
 * Therefore, False
+* * 
+* 16/09/26
+* Lecture
+* Functions:
+* type()
+* min(a, b, c)
+* max(a, b, c)
+* abs(a) - cannot put multiple arguments like (a, b, c)
+* API sheet will be provided in midterm
+* help(abs) - it returns the abs(x, /), meaning which it takes one argument
+* dir(__builtins__) - dir gives a list of all built-in functions, very helpful
+* import math
+* function design recipe
+* there is no 1-1 requirement

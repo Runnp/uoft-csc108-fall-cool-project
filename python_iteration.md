@@ -318,3 +318,9 @@ result = min(data, data2)
 *     print (2 * x)
 * a = example (1)
 * - will display only 1, cuz everything stops after return
+* - will display only 3, first return then freezes
+* 
+* When nothing to return - will display None
+* def area_Triangle(a, b, c):
+*     return 1/2 * (a + b + c)
+

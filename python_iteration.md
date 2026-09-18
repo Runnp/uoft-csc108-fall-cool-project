@@ -324,3 +324,30 @@ result = min(data, data2)
 * def area_Triangle(a, b, c):
 *     return 1/2 * (a + b + c)
 
+
+* 18/09/26
+* Lecture
+* x = (q * y) + r
+* To find q, do -2 // 6.
+* We know -2/6 is -0.33
+* // does floor -1, q = -1
+* def triangle_area(a: int, b: int, c: int) -> float
+* No checking will take place
+* We are all Adam
+* Function: Docstrings
+* args(): type,…
+* Global scope
+* Local scope
+* Takes it off after return x
+* Memory management
+* Replace
+* def foo():
+*     x = 2
+*     return x
+* x
+* NameError: name ‘x’ is not defined
+* 
+* text = "  abc  "
+* print(len(text.strip()))
+* - len(text.strip()) will result in just how many real letters does the text have,
+* in this example only three letters, a b c namely, counted up to 3

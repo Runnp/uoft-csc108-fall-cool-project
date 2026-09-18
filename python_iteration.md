@@ -290,3 +290,18 @@ result = min(data, data2)
 * import math
 * function design recipe
 * there is no 1-1 requirement
+
+* 
+* def[]f(x):
+* [][][][]function statement
+* indenting
+* convention - verb noun so that others can follow ur code
+* pythonic - like correct way of doin
+* def f(x, y):
+*     return x % y
+* x = f (5, 2) - which is 1
+* y = f (20, 7) - which is 6
+* 
+* return value = none, when using print
+* return x = 3, return value = 9
+* we aint able  reuse tha

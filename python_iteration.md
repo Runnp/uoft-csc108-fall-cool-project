@@ -311,3 +311,10 @@ result = min(data, data2)
 * def example(x):
 *     print (2 * x) - will display 2
 *     return 3 * x - it will not display on the screen
+* * 
+* def example(x):
+*     print (1 * x)
+*     return 3 * x 
+*     print (2 * x)
+* a = example (1)
+* - will display only 1, cuz everything stops after return

@@ -305,3 +305,9 @@ result = min(data, data2)
 * return value = none, when using print
 * return x = 3, return value = 9
 * we aint able  reuse tha
+* 
+* -2 % 6 = 4
+* 1
+* def example(x):
+*     print (2 * x) - will display 2
+*     return 3 * x - it will not display on the screen

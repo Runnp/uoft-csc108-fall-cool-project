@@ -409,3 +409,11 @@ result = min(data, data2)
 * white_queen.count("jam").lower()
 * white_queen.lower().count("jam") - True
 * white_queen.count("Jam".lower())
+* 
+* The math module has a function that finds the ceiling of a number (the smallest int value greater or equal to the number). Assuming that the math module has already been imported, write an expression that calls the ceiling function from math to find the ceiling of 84.2.
+* Hint: In the Python shell, import math and then use dir and help on the math module to determine the name of the function that you need to use.
+* math.ceiling(84.2)
+* ceiling(84.2)
+* math.ceil(84.2) - True
+* 
+* print(int(99.9) - will result in 99

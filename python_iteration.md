@@ -351,3 +351,26 @@ result = min(data, data2)
 * print(len(text.strip()))
 * - len(text.strip()) will result in just how many real letters does the text have,
 * in this example only three letters, a b c namely, counted up to 3
+* 
+* x = 7
+* def foo():
+*     x = x + 2
+*     return
+* 
+* foo()
+* Local scope cannot add from Global scope
+* Therefore, UnboundLocalError: local variable ‘x’
+* msg = "banana"
+* print(msg.count("an", 1, 4))
+* - output 1
+* 
+* msg = "banana"
+* print(msg.count("an", 1, 5))
+* - output 2
+* 
+* Docstring
+* >>> is_sorted("123")
+* True
+* >>> is_sorted("132")
+* False
+* You write inside the code

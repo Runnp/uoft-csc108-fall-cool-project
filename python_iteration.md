@@ -417,3 +417,36 @@ result = min(data, data2)
 * math.ceil(84.2) - True
 * 
 * print(int(99.9) - will result in 99
+* rint('hello', '-', 'how', '-', 'are', '-', 'you')
+* will result in ‘hello - how - are - you’
+* 
+* SyntaxError: Select the code fragment(s) that result in a SyntaxError.
+* 1)’yes\nno'
+* 2)”yes
+* no"
+* 3)’’’yes
+* no'''
+* 4)’ yes
+* no'
+* The right answers are 2 and 4.
+* 
+* Select the expression(s) that produce True.
+* 'as' in 'it happens'
+* len('aabbcc') == 6
+* 'do' in "don't"
+* len('aabbcc') == 3
+* The right answers are 2 and 3.
+* 
+* Select the expression(s) that produce True.
+* 'apple'.upper() == 'APPLE'
+* - True
+* 'abc123'.isdigit()
+* - False
+* 'apple'.upper().isupper()
+* - True
+* 'apple'.upper().islower()
+* - False
+* 'abc123'.isalnum()
+* - True
+* '12.34'.isalnum()
+* - False

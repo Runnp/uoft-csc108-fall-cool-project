@@ -388,3 +388,24 @@ result = min(data, data2)
 * - 6 siblings!
 * str(int(bro + sis)) + sibs
 * - 42 siblings!
+
+* 
+* s = 'Call Me Maybe'
+* Select the expression(s) that produce 'e'.
+* s[12] - True
+* s[13]
+* s[-0]
+* s[-1] - True
+* 
+* Consider this code:
+* >>> white_queen = "Jam tomorrow and jam yesterday - but never jam today."
+* >>> white_queen.count("jam")
+* 2
+* The code above counts only lowercase occurrences of "jam". Below is the output of help(str.lower):
+* lower(...)
+*     S.lower() -> str
+*     Return a copy of the string S converted to lowercase.
+* Which expression produces the number of occurrences of "jam" ignoring letter case?
+* white_queen.count("jam").lower()
+* white_queen.lower().count("jam") - True
+* white_queen.count("Jam".lower())

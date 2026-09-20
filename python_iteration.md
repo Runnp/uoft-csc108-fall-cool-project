@@ -374,3 +374,17 @@ result = min(data, data2)
 * >>> is_sorted("132")
 * False
 * You write inside the code
+* 
+* 19/09/26
+* >>> bro = input("How many brothers do you have? ") 
+* How many brothers do you have? 4
+* >>> sis = input("How many sisters do you have? ")
+* How many sisters do you have? 2
+* >>> sibs = ' siblings!'
+* Assuming the code above has been executed, choose the expression below that evaluates to: 6 siblings!
+* (bro + sis) + sibs
+* - 42 siblings! 
+* str(int(bro) + int(sis)) + sibs
+* - 6 siblings!
+* str(int(bro + sis)) + sibs
+* - 42 siblings!

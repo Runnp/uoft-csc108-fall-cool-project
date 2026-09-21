@@ -450,3 +450,97 @@ result = min(data, data2)
 * - True
 * '12.34'.isalnum()
 * - False
+- * Select the expression(s) that produce True when variable s refers to a str that is entirely alphabetic or entirely numeric, and that produce False if they are not entirely alphabetic and not entirely numeric.
+* s.islower() or s.isupper()
+* s.isalpha() and s.isnumeric()
+* s.lower() or s.upper() or s.isdigit()
+* s.isalpha() or s.isnumeric() - True
+* The right answer is 4.
+* 
+* After the following assignment statement has been executed, which expression(s) produce the letter "g"?
+* dance_style = "Gangnam"
+* dance_style[-5]
+* dance_style[-4] - True
+* dance_style[2]
+* dance_style[4]
+* dance_style[-3]
+* dance_style[3] - True
+* The right answers are 2 and 6.
+* 
+* Considering this code:
+* s = 'pineapple'
+* Select the expression(s) that produce 'apple'.
+* s[4:9]
+* - apple
+* s[-5:]
+* - apple
+* s[-5:-1]
+* - appl
+* s[5:9]
+* - pple
+* s[4:len(s)]
+* - apple
+* s[5:]
+* - pple
+* The right answers are 1, 2, and 5
+* 
+* Consider this code:
+* s = 'Jacqueline'
+* You know that the slicing operation s[1:4] will produce the string 'acq'. The slicing operation has an optional third parameter that determines the stride (or distance between characters) in the slice. For example, the slicing operation s[::2] will produce the string 'Jculn', which has every other character in 'Jacqueline'
+* 
+* Consider this code:
+* s = 'Jacqueline' Select the expressions that produce 'aqeie'.
+* s[0:0:2]
+* s[::2]
+* s[1:0:2]
+* s[1::2] - True
+* 
+* Consider this code:
+* s = 'Jacqueline' Select the expression(s) that produce the string 'enileuqcaJ'.
+* s[::-1] - True
+* s[::]
+* s[::-2]
+* s[0:-1:-2]
+* 
+* Consider this code:
+* s = 'Jacqueline' Select the expression(s) that produce the string 'eieqa'.
+* s[::-1]
+* s[-1:0:-2] - True
+* s[::-2] - True
+* s[0:-1:-2]
+* 
+* Consider this code wish = 'Happy Birthday' After the code above is executed, which of the following expressions produces 'happy birthday'?
+* wish[0].lower() + wish[6].lower()
+* wish.swapcase()
+* wish[0].lower() + wish[1:6] + wish[6].lower() + wish[7:] - True
+* wish.lower() - True
+* H
+* Consider this code: robot = 'R2D2' Assuming the code above has been executed, select the expression(s) that produce True.
+* robot.isupper() - True
+* robot.isalpha()
+* robot.isalnum() - True
+* robot.isdigit()
+* 
+* Consider this code:
+* lyrics = '''O Canada!
+* Our home and native land!
+* True patriot love in all of us command.''' Select the expression that produces the index of the second exclamation mark.
+* lyrics.find('!')
+* lyrics.find('!').find('!')
+* lyrics.find('!', lyrics.find('!'))
+* lyrics.find('!', lyrics.find('!') + 1) - True
+* 
+* Considering this code:
+* s = 'carrot' Select the expression(s) that produce 'car'.
+* s[:3]      - car
+* s[-1:3]  - 
+* s[-6:3] - car
+* s[0:4]   - carr
+* s[-6:-3] - car
+* s[-6:4]   - carr
+* 
+* Consider this code:
+* prefix = 'mad' What does the expression prefix[:1] + prefix[1:3] + prefix[-2] + prefix[0] produce?
+* 'madam
+* 'madma'
+* 'adama'

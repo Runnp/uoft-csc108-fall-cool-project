@@ -544,3 +544,25 @@ result = min(data, data2)
 * 'madam
 * 'madma'
 * 'adama'
+* 
+* Complete the function body below so the return statement executes correctly according to the docstring description and examples.
+def swap_ends(message: str) -> str:
+    """Return a new string that is message with the first and last
+    characters swapped.
+    
+    Precondition: len(message) >= 2
+    
+    >>> swap_ends('cat')
+    'tac'
+    >>> swap_ends('breakfast for dinner!')
+    '!reakfast for dinnerb'
+    """
+    last_char = message[-1]
+    first_char = message[0]
+    middle = message[1: len(message) - 1]
+    return last_char + middle + first_char
+* Select the code fragment(s) that evaluate(s) to True.
+* 'how are you?'.isspace()
+* '   Hi!   '.strip() == 'Hi!    '
+* 'hello'.rfind('l') == 3      - True
+* '007B!'.isupper()            - True

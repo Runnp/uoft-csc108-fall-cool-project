@@ -63,76 +63,71 @@
 
 # Practical Week 2
 # Task 1
-# def leetcodes_answered(num_weeks: int, questions_per_week: int) -> int:
-#     '''Return the total number of leetcode questions done over num_weeks
-#     where in each week questions_per_week were answered
-#     >>> leetcodes_answered(2, 30)
-#     60
-#     >>> leetcodes_answered(1, 8)
-#     8
-#     '''
-#     return num_weeks * questions_per_week
-# # two of us are doing leetcode but at different rates and different amounts of time
-# person_a = leetcodes_answered(2, 8)
-# person_b_rate = 30
-# person_b = leetcodes_answered(1, person_b_rate)
-# grand_total = person_a + person_b
-# print("With the two of us combined, we will have done", grand_total, "questions")
+def leetcodes_answered(num_weeks: int, questions_per_week: int) -> int:
+    '''Return the total number of leetcode questions done over num_weeks
+    where in each week questions_per_week were answered
+    >>> leetcodes_answered(2, 30)
+    60
+    >>> leetcodes_answered(1, 8)
+    8
+    '''
+    return num_weeks * questions_per_week
+# two of us are doing leetcode but at different rates and different amounts of time
+person_a = leetcodes_answered(2, 8)
+person_b_rate = 30
+person_b = leetcodes_answered(1, person_b_rate)
+grand_total = person_a + person_b
+print("With the two of us combined, we will have done", grand_total, "questions")
 
 # Task 2
-# def cookies_needed(adults: int, teens: int, children: int) -> int:
-#     '''Return the number of cookies needed to
-#     feed this number of adults, teens and children.
-#     Each adult eats two, each teen six, and each child three.
-#     >>> cookies_needed(2, 3, 1)
-#     25
-#     '''
-#     adults_cookies = 2
-#     teen_cookies = 6
-#     child_cookies = 3
-#     return adults_cookies * adults + teen_cookies * teens + child_cookies * children
+def cookies_needed(adults: int, teens: int, children: int) -> int:
+    '''Return the number of cookies needed to
+    feed this number of adults, teens and children.
+    Each adult eats two, each teen six, and each child three.
+    >>> cookies_needed(2, 3, 1)
+    25
+    '''
+    adults_cookies = 2
+    teen_cookies = 6
+    child_cookies = 3
+    return adults_cookies * adults + teen_cookies * teens + child_cookies * children
 #
-# def is_multiple_of_7(x: int) -> bool:
-#     '''Return True iff 7 divides x without a remainder.
-#     >>> is_multiple_of_7(15)
-#     False
-#     >>> is_multiple_of_7(7)
-#     True
-#     '''
-#     if x % 7 == 0:
-#         return True
-#     return False
-#     pass
+def is_multiple_of_7(x: int) -> bool:
+    '''Return True iff 7 divides x without a remainder.
+    >>> is_multiple_of_7(15)
+    False
+    >>> is_multiple_of_7(7)
+    True
+    '''
+    return x % 7 == 0
 #
-# def is_multiple(x: int, y: int) -> bool:
-#     '''Return True iff y divides x without a remainder.
-#     >>> is_multiple(15, 3)
-#     True
-#     >>> is_multiple(7, 2)
-#     False
-#     '''
-#     if x % y == 0:
-#         return True
-#     return False
-#     pass
+def is_multiple(x: int, y: int) -> bool:
+    '''Return True iff y divides x without a remainder.
+    >>> is_multiple(15, 3)
+    True
+    >>> is_multiple(7, 2)
+    False
+    '''
+    return x % y == 0
+
 
 # Task 3
-# def feet_to_meter(f: float) -> float:
-#     '''Return the number of meters equivalent to f feet.
-#         >>> feet_to_meter(10.0)
-#         3.047851264858275
-#     '''
-#     return f / 3.281
-#
-# def meter_to_feet(m: float) -> float:
-#     '''Return the number of feet equivalent to m meters.
-#         >>> meter_to_feet(3.048)
-#         10.000488
-#         '''
-#     return m * 3.281
-#
-# print(feet_to_meter(10.0))
-# print(meter_to_feet(3.048))
+def feet_to_meter(f: float) -> float:
+    '''Return the number of meters equivalent to f feet.
+        >>> feet_to_meter(10.0)
+        3.047851264858275
+    '''
+    return f / 3.281
+
+def meter_to_feet(m: float) -> float:
+    '''Return the number of feet equivalent to m meters.
+        >>> meter_to_feet(3.048)
+        10.000488
+        '''
+    return m * 3.281
+
+print(feet_to_meter(10.0))
+print(meter_to_feet(3.048))
 
 # Task 4
 ''' Reminder that all the weights listed in this file ARE NOT a reflection
@@ -224,3 +219,24 @@ def exam_required(term_work: float, desired_grade: int) -> float:
     '''
     return ((desired_grade - term_work) / 30 * 100)
 # print(exam_required (46.0, 82))
+
+# Task 5
+# Research the syntax needed to have one of your function parameters be another function, and write a function that takes one
+# input, two other functions and returns True or False whether the two functions return the same result on the given input.
+# 255, 192, 203 - Pink
+# 255, 182, 193 - Light Pink
+# 170, 51, 106 - Dark Pink
+
+def is_light_or_dark(red: int, green: int, blue: int) -> bool:
+    """Return whether the colour meets our light-pink rule."""
+    return red == 255 and green <= 200 and blue <= 200
+
+def is_pink(red: int, green: int, blue: int) -> bool:
+    """Return whether the colour is exactly RGB (255, 192, 203)."""
+    return red == 255 and green == 192 and blue == 203
+
+def same_result(colour: tuple[int, int, int], function1, function2) -> bool:
+    """Return whether both functions return the same result for colour."""
+    return function1(*colour) == function2(*colour)
+
+same_result((255, 192, 203), is_light_or_dark, is_pink)

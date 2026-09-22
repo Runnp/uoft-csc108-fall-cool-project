@@ -618,3 +618,22 @@ def upper_lower(s: str) -> bool:
 *     >>>(5, 2, 1)
 *     20    
 *     return (2 * adults + 3 * teens + 4 * children)
+
+* 
+* def scholarship(cgpa: float, year_of_study: int) -> float:
+*     “””Requirements for being eligible for a scholarship are having CGPA above 3.7 and studying in 2 or 3 year of study”””
+*     >>>(3.8, 2)
+*     True
+*     >>>(3.5, 3)
+*     False
+*     if (cgpa > 3.7):
+*         if (year_of_study == 2 or year_of_study == 3):
+*             return True
+*         else: return False
+*     else:
+*         return False
+* 
+* scholarship(3.8, 1)
+* - False
+* scholarship(4.0, 2)
+* - True

@@ -581,3 +581,40 @@ def upper_lower(s: str) -> bool:
     True
     """
     return s.isupper() or s.islower()
+
+
+* 21/09/26
+* Lecture
+* Choosing a dataset for Assignment Phase 0
+* To work with data, analysis and conclusions
+* .csv
+
+* 
+* x = 7
+* def foo():
+*     x = x + 2
+*     return x
+* x  = x + foo(x)
+* print(x)
+* - will result in 16
+* 
+* import doctest
+* def area_rectangle(length: float, width: float) -> float
+*     >>>area_rectangle(1.0,5.0)
+*     5.0
+*     >>>area_rectangle(1.5,10.0)
+*     15.0
+*     >>>area_rectangle(1.0,1.0)
+*     1.0
+*     return length * width
+* doctest.testmod()
+* * 
+* - doctest allows us to verify our code results
+* “””Description of function””” - description
+* header - description - use cases - body - return statement
+* 
+* def cookies(adults: int, teens: int, children: int) -> int:
+*     “””Cookies for everyone”””
+*     >>>(5, 2, 1)
+*     20    
+*     return (2 * adults + 3 * teens + 4 * children)

@@ -566,3 +566,18 @@ def swap_ends(message: str) -> str:
 * '   Hi!   '.strip() == 'Hi!    '
 * 'hello'.rfind('l') == 3      - True
 * '007B!'.isupper()            - True
+* 
+* Complete this function according to its docstring description.
+def upper_lower(s: str) -> bool:
+    """Return True if and only if there is at least one alphabetic character
+    in s and the alphabetic characters in s are either all uppercase or all
+    lowercase.
+    
+    >>> upper_lower('abc')
+    True
+    >>> upper_lower('abcXYZ')
+    False
+    >>> upper_lower('XYZ')
+    True
+    """
+    return s.isupper() or s.islower()

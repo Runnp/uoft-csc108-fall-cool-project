@@ -689,3 +689,17 @@ def upper_lower(s: str) -> bool:
 * 02468
 * 14
 * 9876543210
+* 
+* return input_str ‎ = = input_str[::-1]
+*  
+* 23/09/26
+* Independent Study
+* Consider this code:
+* return temp == 22.5 Select the code fragment(s) that are equivalent to the one above.
+* if temp == 22.5:
+*     return True
+
+* if temp == 22.5:
+*     return True
+* else:
+*     return False

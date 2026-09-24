@@ -723,3 +723,15 @@ def upper_lower(s: str) -> bool:
 * if grade2 >= 50:
 *     num_passed = num_passed + 1
 * Correct  — two independent checks, each adding 1: if grade1 >= 50:    num_passed = num_passed + 1if grade2 >= 50:    num_passed = num_passed + 1 The count goes 0 → 1 → 2.
+* * 
+* Incorrect  — the first condition is true, so the elif is skipped. It counts only 1, even when both courses passed.
+* 
+* Incorrect  — it initially sets the count to 2, but the next independent ifs overwrite it with 1. The count goes 0 → 2 → 1 → 1.
+* 
+* if grade1 >= 50 and grade2 >= 50:
+*     num_passed = 2
+* elif grade1 >= 50:
+*     num_passed = 1
+* elif grade2 >= 50:
+*     num_passed = 1
+* Correct  — it first checks whether both passed. If so, it sets 2 and skips the remaining branches. Otherwise, it checks whether either individual course passed and sets 1. If neither passed, the count stays 0.

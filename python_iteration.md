@@ -763,3 +763,41 @@ def upper_lower(s: str) -> bool:
 * 9
 * 0123456789
 * The correct answer is 3
+* 
+* digits = '0123456789'
+* result = ''
+* for digit in digits:
+*     result = result + digit * 2
+* print(result) What is printed by the code above?
+* 0123456789
+* 90
+* 45
+* 00112233445566778899
+* The correct answer is 4
+* 
+* 
+* def common_chars(s1: str, s2: str) -> str:
+*     """Return a string containing all characters from s1 that appear at least
+*     once in s2.  The characters in the result will appear in the same order as
+*     they appear in s1.
+* 
+*     >>> common_chars('abc', 'ad')
+*     'a'
+*     >>> common_chars('a', 'a')
+*     'a'
+*     >>> common_chars('abb', 'ab')
+*     'abb'
+*     >>> common_chars('abracadabra', 'ra')
+*     'araaara'
+*     """
+* * 
+*     res = ''
+* 
+*     # BODY MISSING
+* 
+*     return res
+* The correct answer:
+*     for ch in s1:
+*         if ch in s2:
+*             res = res + ch
+* 

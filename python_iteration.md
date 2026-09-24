@@ -703,3 +703,23 @@ def upper_lower(s: str) -> bool:
 *     return True
 * else:
 *     return False
+
+
+* if temp == 22.5:
+*     return True
+* elif temp != 22.5:
+*     return False
+
+* if temp == 22.5:
+*     return True
+* return False
+* The correct answers are 2, 3, and 4
+* 
+* 
+* The trick: separate ifs all get checked; an if/elif chain stops after its first true condition.
+* Imagine both grades are 80:
+* if grade1 >= 50:
+*     num_passed = num_passed + 1
+* if grade2 >= 50:
+*     num_passed = num_passed + 1
+* Correct  — two independent checks, each adding 1: if grade1 >= 50:    num_passed = num_passed + 1if grade2 >= 50:    num_passed = num_passed + 1 The count goes 0 → 1 → 2.

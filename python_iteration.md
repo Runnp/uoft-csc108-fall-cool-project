@@ -637,3 +637,55 @@ def upper_lower(s: str) -> bool:
 * - False
 * scholarship(4.0, 2)
 * - True
+
+* 23/09/26
+* Lecture
+* id(x)
+* id(y)
+* Strings are saved in different IDs
+* They are recreated and are immutable
+* 
+* “a” < “aa” - True
+* “b” < “aa” - False
+* “abba” < “a” - False
+* Based on UniCode
+* “Abba” < “a” - True
+* “aZ” < “aa” - True
+* 
+* int(“string”) - Error
+* lex(“word”) - 4
+* return “str” in “string” - True
+* int(“h”) - Error
+* ord(“h”) - will return UniCode
+* 
+* x = "hello world”
+* len(x) = 11
+* x[len(x)] - IndexError: string index out of range
+* 
+* hello world - Backwards will begin at -1
+* x[-1] = ‘d’
+* 
+* x = "0123456789"
+* x[-1] == x[len(x)-1]
+* True
+* 
+* x[3:]
+* “3456789”
+* 
+* x[3:-1]
+* “345678”
+* 
+* x[0:-1:2]
+* “02468”
+* 
+* x[1:-3:3]
+* “14”
+* 
+* x[::-1]
+* “9876543210”
+* 
+* 3456789
+* 345678
+* 02468
+* 14
+* 9876543210

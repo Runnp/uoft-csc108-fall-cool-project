@@ -735,3 +735,13 @@ def upper_lower(s: str) -> bool:
 * elif grade2 >= 50:
 *     num_passed = 1
 * Correct  — it first checks whether both passed. If so, it sets 2 and skips the remaining branches. Otherwise, it checks whether either individual course passed and sets 1. If neither passed, the count stays 0.
+
+* l our code for the function count_vowels (shortened for space):
+* def count_vowels(s: str) -> int:
+*     num_vowels = 0
+*     for char in s: 
+*         if char in 'aeiouAEIOU':
+*             num_vowels = num_vowels + 1
+*     return num_vowels What will happen when we pass the empty string as the argument (that is, count_vowels(""))?
+* 
+* The for loop body will not execute, and num_vowels will continue to refer to 0.

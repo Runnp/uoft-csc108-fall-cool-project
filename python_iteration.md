@@ -745,3 +745,21 @@ def upper_lower(s: str) -> bool:
 *     return num_vowels What will happen when we pass the empty string as the argument (that is, count_vowels(""))?
 * 
 * The for loop body will not execute, and num_vowels will continue to refer to 0.
+* * 
+* The for loop body will execute 1 time, with char referring to "". The if condition will be True, and num_vowels will then refer to 1.
+* 
+* An error will be raised when Python tries to iterate through the empty string.
+* The correct answer is 1
+* 
+* 
+* Consider this code:
+* digits = '0123456789'
+* result = 0
+* for digit in digits:
+*     result = digit
+* print(result) What is printed by the code above?
+* 0
+* 45
+* 9
+* 0123456789
+* The correct answer is 3

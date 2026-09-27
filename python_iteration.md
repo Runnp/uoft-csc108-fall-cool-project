@@ -801,3 +801,30 @@ def upper_lower(s: str) -> bool:
 *         if ch in s2:
 *             res = res + ch
 * 
+
+* 25/09/26
+* Lecture
+* [::-1] - reverse
+* “anything”.capitalize()
+* will result in ‘Anything’
+* 
+* dir(str)
+* s = 'friday'
+* s.swapcase()
+* 'FRIDAY'
+* s = 'fRIDAy'
+* s.swapcase()
+* 'FridaY'
+* help(str.swapcase)
+* help(s.find)
+* Help on built-in function find:
+* find(sub[, start[, end]], /) method of builtins.str instance
+*     Return the lowest index in S where substring sub is found, such that sub is contained within S[start:end].
+*     Optional arguments start and end are interpreted as in slice
+*     notation.  Return -1 on failure.
+* s.center(20)
+* '       fRIDAy       '
+* "hello hello".find("hello", 1, 3)
+* -1
+* "hello hello".find("hello", 1)
+* 6

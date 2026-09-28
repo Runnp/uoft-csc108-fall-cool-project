@@ -938,3 +938,52 @@ def upper_lower(s: str) -> bool:
 *     for ch in s1:
 *         if ch in s2:
 *             res = res + ch
+* 
+* 
+* def common_chars(s1: str, s2: str) -> str:
+*     """Return a string containing all characters from s1 that appear at least
+*     once in s2.  The characters in the result will appear in the same order as
+*     they appear in s1.
+* 
+*     >>> common_chars('abc', 'ad')
+*     'a'
+*     >>> common_chars('a', 'a')
+*     'a'
+*     >>> common_chars('abb', 'ab')
+*     'abb'
+*     >>> common_chars('abracadabra', 'ra')
+*     'araaara'
+*     """
+* * 
+*     res = ''
+* 
+*     # BODY MISSING
+* 
+*     return res
+* The correct answer:
+*     for ch in s1:
+*         if ch in s2:
+*             res = res + ch
+* 
+* 
+* def is_teenager(age: int) -> bool:
+*     """Return True iff age represents a teenager between 13 and 18 inclusive.
+*     >>> is_teenager(4)
+*     False
+*     >>> is_teenager(16)
+*     True
+*     >>> is_teenager(19)
+*     False
+*     """
+* 
+*     if age < 13:
+*         return False
+*     else:
+*         if age > 18:
+*             return False
+*         else:
+*             return True
+* 
+*     False if age < 13 else False if age > 18 else True
+* 
+

@@ -19,8 +19,6 @@ def total_ticket_price(n_reg_tic: int, n_stu_tic: int, holiday: bool) -> int:
         if (n_reg_tic + n_stu_tic) >= 10:
             total = total * 0.9
     return round(total, 2)
-# print(total_ticket_price(8, 2, True))
-#(8 * 4.50 + 2 * 2.5) * 0.95 = 38,95
 
 def australian_timezone(time: float, toronto_day: bool, melbourne_day: bool) -> float:
     if toronto_day and melbourne_day:
@@ -30,6 +28,3 @@ def australian_timezone(time: float, toronto_day: bool, melbourne_day: bool) -> 
     else:
         time = time + 16
     return time % 24
-# print(australian_timezone(17, True, False))
-# print(australian_timezone(6, False, True))
-# print(australian_timezone(10, True, True))

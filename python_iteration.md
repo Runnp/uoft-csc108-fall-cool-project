@@ -845,3 +845,23 @@ def upper_lower(s: str) -> bool:
 *         elif ch.islower():
 *             l += 1
 *     return u > l
+* * 
+* Ternary Practice
+* Which of the following has the correct syntax for using ternary operators? You may assume number is a variable that holds an int.
+*  result = "Even" if number % 2 == 0 else "Odd" 
+* 
+*  result = if number % 2 == 0 then "Even" else "Odd" 
+* 
+*  result = number % 2 == 0 ? "Even" : "Odd" 
+* 
+*  result = "Even" else "Odd" if number % 2 == 0 
+* 
+*  result = "Odd" if number % 2 != 0 else "Even"
+* 
+*  result = "Even" if number % 2 = 0 else "Odd"
+* 
+*  result = "Even" if number % 2 == 0
+* 
+*  if number % 2 == 0: result = "Even" 
+*  else: result = "Odd"
+* The correct answers are 1 and 5 only.

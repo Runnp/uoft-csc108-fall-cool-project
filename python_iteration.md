@@ -865,3 +865,76 @@ def upper_lower(s: str) -> bool:
 *  if number % 2 == 0: result = "Even" 
 *  else: result = "Odd"
 * The correct answers are 1 and 5 only.
+
+* another challenge:
+* def add_underscores(s: str) -> str:
+*     """Return s with an underscore between each pair of characters
+* 
+*     >>>"dicso"
+*     "d_i_s_c_o"
+* 
+*     """
+* 	o = ''
+*     for ch in s:
+*         if o != '':
+*             o += '_'
+*         o += ch
+*     return(o)
+* * 
+* hard problem:
+* def all_fluffy(s: str) -> bool:
+*     """Return True iff every letter in s is fluffy. Fluffy letters are those
+*     that appear in the word 'fluffy'.
+*     >>>"fluffy"
+* 	True
+* 
+*     """
+* 	for ch in s:
+*         if ch not in 'fluffy':
+*             return False
+*     return True
+* * 
+* def is_teenager(age: int) -> bool:
+*     """Return True iff age represents a teenager between 13 and 18 inclusive.
+*     >>> is_teenager(4)
+*     False
+*     >>> is_teenager(16)
+*     True
+*     >>> is_teenager(19)
+*     False
+*     """
+* 
+*     if age < 13:
+*         return False
+*     else:
+*         if age > 18:
+*             return False
+*         else:
+*             return True
+* 
+*     False if age < 13 else False if age > 18 else True
+* 
+* def common_chars(s1: str, s2: str) -> str:
+*     """Return a string containing all characters from s1 that appear at least
+*     once in s2.  The characters in the result will appear in the same order as
+*     they appear in s1.
+* 
+*     >>> common_chars('abc', 'ad')
+*     'a'
+*     >>> common_chars('a', 'a')
+*     'a'
+*     >>> common_chars('abb', 'ab')
+*     'abb'
+*     >>> common_chars('abracadabra', 'ra')
+*     'araaara'
+*     """
+* 
+*     res = ''
+* 
+*     # BODY MISSING
+* 
+*     return res
+* The correct answer:
+*     for ch in s1:
+*         if ch in s2:
+*             res = res + ch

@@ -828,3 +828,20 @@ def upper_lower(s: str) -> bool:
 * -1
 * "hello hello".find("hello", 1)
 * 6
+* 
+* def more_upper_than_lower(message: str) -> bool:
+*     """Return True if and only if message contains more uppercase letters than
+*     lowercase letters.
+* 
+*     >>> more_upper_than_lower(‘I LOVE Caps Lock! :D')
+*     True
+*     >>> more_upper_than_lower('Does THIS Work?')
+*     False
+*     """ 
+* 	u, l = 0, 0
+*     for ch in message:
+*         if ch.isupper():
+*             u += 1
+*         elif ch.islower():
+*             l += 1
+*     return u > l

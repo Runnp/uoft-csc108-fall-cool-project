@@ -999,3 +999,11 @@ def upper_lower(s: str) -> bool:
 * 1, 3
 * 2, 2
 
+
+* 28/09/26
+* Lecture, Pre-Midterm
+* (2 ** 5) ** 2 - 2 in 10th power
+* (16 // 10) - 1
+* “Or” is not Lazy Evaluation
+* "this is Toronto" < "this is the 6" - True
+* Upper case gets lower value than lower case in UniCode

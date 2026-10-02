@@ -245,25 +245,25 @@
 # 1. my height is a float variable representing your current height in meters.
 # a. Write a Python statement that assigns a Boolean variable tall the value of True if and only if I am at least 3.2
 # meters tall
-def is_tall(my_height):
-    tall = False
-    if my_height >= 3.2:
-        tall = True
-    return tall
-print(is_tall(2.0))
+# def is_tall(my_height):
+#     tall = False
+#     if my_height >= 3.2:
+#         tall = True
+#     return tall
+# print(is_tall(2.0))
 
 
 # 2. min height is another float variable representing the minimum height I need to be allowed on the rollercoaster (This
 # values changes depending on which rollercoaster I want to attend).
 # b. Write a Python statement that creates a Boolean variable close that is True if and only if my current height is above
 # the minimum height, but is dangerously close (i.e. within 0.04 of the minimum height).
-def is_allowed(my_height):
-    min_height = 1.7
-    close = True
-    if my_height >= min_height and my_height - min_height <= 0.04:
-        close = True
-    return close
-print(is_allowed(1.7))
+# def is_allowed(my_height):
+#     min_height = 1.7
+#     close = True
+#     if my_height >= min_height and my_height - min_height <= 0.04:
+#         close = True
+#     return close
+# print(is_allowed(1.7))
 
 # 3. A student may get into CSC311 (Intro to Machine Learning) if they have a GPA of 2.0 or higher, and if they have taken
 # at least one of MAT223 or MAT240 (These are not the real requirements). g is a float variable representing my
@@ -272,28 +272,28 @@ print(is_allowed(1.7))
 # c. Write a Python expression with the variables g, MAT223 and MAT240 that evaluates to True if I can take CSC311, and
 # to False otherwise. Note: you cannot use an “if” statement here; you are explicitly being asked for an expression,
 # not a statement!
-def can_take_course(g, mat223, mat240):
-    can = False
-    if g >= 2.0 and mat223 == True and mat240 == True:
-        can = True
-    return can
-print(can_take_course(2.0, True, False))
+# def can_take_course(g, mat223, mat240):
+#     can = False
+#     if g >= 2.0 and mat223 == True and mat240 == True:
+#         can = True
+#     return can
+# print(can_take_course(2.0, True, False))
 
 # 4. Now, assume that we do not know what my actual GPA is (we do not have the float g but we have a Boolean variable b
 # that represents whether my GPA is at least 2.0.
 # d. Write another expression, using b, MAT223, and MAT240: it should evaluate to True if I can take CSC311, and to
 # False otherwise.
-def can_take_with_no_g(b, mat223, mat240):
-    can = False
-    if b == True and mat223 == True and mat240 == True:
-        can = True
-    return can
-print(can_take_with_no_g(True, True, True))
-
-str1 = 'fourtyseven'
-str2 = 'sixtyfive'
-if len(str1) > len(str2):
-    print(str1)
-else:
-    print(str2)
-
+# def can_take_with_no_g(b, mat223, mat240):
+#     can = False
+#     if b == True and mat223 == True and mat240 == True:
+#         can = True
+#     return can
+# print(can_take_with_no_g(True, True, True))
+#
+# str1 = 'fourtyseven'
+# str2 = 'sixtyfive'
+# if len(str1) > len(str2):
+#     print(str1)
+# else:
+#     print(str2)
+#

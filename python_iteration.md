@@ -1007,3 +1007,13 @@ def upper_lower(s: str) -> bool:
 * “Or” is not Lazy Evaluation
 * "this is Toronto" < "this is the 6" - True
 * Upper case gets lower value than lower case in UniCode
+* 2/10/26
+* Lecture Loops
+* For Loop
+* for <name> in <collection>
+    * <code>
+* for x in “abcd”:
+    * print(x)
+* Prints out every letter in str
+* Returns only the last x
+* f

@@ -1017,3 +1017,21 @@ def upper_lower(s: str) -> bool:
 * Prints out every letter in str
 * Returns only the last x
 * f
+
+* 2/10/26
+* Lecture Loops
+* For Loop
+* for <name> in <collection>
+    * <code>
+* for x in “abcd”:
+    * print(x)
+* Prints out every letter in str
+* Returns only the last x
+* 
+* vowels = [‘a’, ‘e’, ‘u’, ‘i’, ‘o’]
+* has_vowel = False
+* text = “random”
+* for char in text:
+    * if char in vowels:
+        * has_vowel = True
+* print(has_vowel)

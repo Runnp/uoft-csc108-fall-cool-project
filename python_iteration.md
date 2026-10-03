@@ -1017,6 +1017,11 @@ def upper_lower(s: str) -> bool:
 * Prints out every letter in str
 * Returns only the last x
 * f
+* 30/09/26
+* Lecture
+* s = "We’re” + “Here”
+* print(s[4::2])
+* We’reHere
 
 * 2/10/26
 * Lecture Loops

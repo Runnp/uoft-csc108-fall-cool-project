@@ -1022,6 +1022,12 @@ def upper_lower(s: str) -> bool:
 * s = "We’re” + “Here”
 * print(s[4::2])
 * We’reHere
+* 012345678
+* Start at 4 and take every 2nd
+* Therefore: 4, 6, 8
+* Thus: e, e, e
+* 1, 3
+* 2, 2
 
 * 2/10/26
 * Lecture Loops

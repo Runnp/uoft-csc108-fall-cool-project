@@ -40,3 +40,17 @@ def mystery_math(n: int) -> float:
     return (6 * res) ** 0.5
 
 print(mystery_math(10))
+
+def swap_neighbours(s: str) -> str:
+    """
+    Swap all neighbouring letters of a given string.
+    """
+    em = ''
+    for i in range(0, len(s) - 1, 2):
+        em += s[i + 1] + s[i]
+
+    if len(s) % 2 == 1:
+        em += s[-1]
+    return em
+
+print(swap_neighbours('abcdefg'))

@@ -1087,3 +1087,21 @@ def upper_lower(s: str) -> bool:
 * -1
 * "hello hello".find("hello", 1)
 * 6
+
+* 5/10/26
+* Lecture
+* Assignment 1:
+* Python.py
+* Video.mp4
+* Reading Decomposition
+* Task 1
+* def mystery_math(n: int) -> float:
+*     """
+*     Return the expansion provided in the lecture.
+*     """
+*     res = 0
+*     for i in range(1, n + 1):
+*         res += 1 / (i * i)
+*     return (6 * res) ** 0.5
+* 
+* print(mystery_math(10))

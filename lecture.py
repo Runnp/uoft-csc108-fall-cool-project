@@ -21,11 +21,22 @@
 # doctest.testmod()
 #
 
-import random
-def generate_random_text(length: int) -> str:
-    head=['a', 'b', 'c', 'd']
-    for i in range(length):
-        head.append(random.choice(head))
-    return ''.join(head)
-output = generate_random_text(1296)
-print("\n".join(output[a:a + 100] for a in range(0, len(output), 100)))
+# import random
+# def generate_random_text(length: int) -> str:
+#     head=['a', 'b', 'c', 'd']
+#     for i in range(length):
+#         head.append(random.choice(head))
+#     return ''.join(head)
+# output = generate_random_text(1296)
+# print("\n".join(output[a:a + 100] for a in range(0, len(output), 100)))
+
+def mystery_math(n: int) -> float:
+    """
+    Return the expansion provided in the lecture.
+    """
+    res = 0
+    for i in range(1, n + 1):
+        res += 1 / (i * i)
+    return (6 * res) ** 0.5
+
+print(mystery_math(10))

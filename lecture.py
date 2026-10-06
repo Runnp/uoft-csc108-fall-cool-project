@@ -54,3 +54,18 @@ def swap_neighbours(s: str) -> str:
     return em
 
 print(swap_neighbours('abcdefg'))
+
+
+def divisible_by_7(lst: list[int]) -> bool:
+    """Return True if and only if lst contains an element divisible
+    by 7. Otherwise, return False.
+
+    >>> divisible_by_7([4,8,21,6])
+    True
+    >>> divisible_by_7([1,2,8,9])
+    False
+    """
+    for num in lst:
+        if num % 7 == 0:
+            return True
+    return False

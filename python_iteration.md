@@ -1105,3 +1105,17 @@ def upper_lower(s: str) -> bool:
 *     return (6 * res) ** 0.5
 * 
 * print(mystery_math(10))
+def some_function():
+    counter = 0
+	
+    while counter < 50:
+        print(counter)
+
+
+Select the option that best describes what happens when some_function is called.
+
+
+The numbers 0 to 50 are printed.
+The numbers 1 to 49 are printed.
+Nothing is printed because the loop is infinite.
+A lot of 0's are printed because the loop is infinite.

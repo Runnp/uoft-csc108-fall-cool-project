@@ -1119,3 +1119,27 @@ The numbers 0 to 50 are printed.
 The numbers 1 to 49 are printed.
 Nothing is printed because the loop is infinite.
 A lot of 0's are printed because the loop is infinite.
+
+Enumerate - Syntax
+
+Which of the following correctly uses enumerate()? Assume numbers is a list of ints.
+
+
+
+for index, value in enumerate(numbers): 
+    print(index, value)
+
+for index in enumerate(numbers): 
+    print(index)
+
+for value, index in enumerate(numbers): 
+    print(value, index)
+
+for index, value in numbers: 
+    print(index, value)
+
+for position, value in enumerate(numbers): 
+    print(value)
+
+for i, num enumerate(numbers):
+     print(i, num)

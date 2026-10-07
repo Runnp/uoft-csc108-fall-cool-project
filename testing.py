@@ -1,15 +1,10 @@
-fuddlebub = [1, 2, 3]
-
-# for item in fuddlebub:
-#     print(item)
-#
-# for index in range(len(fuddlebub)):
-#     print(fuddlebub[index])
-
-counter = 0
-while counter < len(fuddlebub):
-    print(fuddlebub[counter])
-    counter += 1
-
-for item in fuddlebub:
-    print(fuddlebub[item])
+dictionary = ["month", "year", "day", "half_of_day", "decade", "century"]
+string_one = "year"
+string_two = "half_of_day"
+def later(string_one, string_two):
+    if string_one in dictionary and string_two in dictionary:
+        one = dictionary.index(string_one)
+        two = dictionary.index(string_two)
+        return string_one if one > two else string_two
+    return -1
+print(later(string_one, string_two))

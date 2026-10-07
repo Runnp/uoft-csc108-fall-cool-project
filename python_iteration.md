@@ -1143,3 +1143,10 @@ for position, value in enumerate(numbers):
 
 for i, num enumerate(numbers):
      print(i, num)
+
+* 7/10/26
+* The process of starting with a large problem and breaking it down is called prob-
+* lem decomposition.
+* The way we’re doing this here is synonymous with the soft-
+* ware engineering technique known as top-down design.
+* While loops - Not clear cycle count

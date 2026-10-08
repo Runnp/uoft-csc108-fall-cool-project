@@ -6,4 +6,6 @@ def where(s, ch):
         if letter == ch:
             l_index = index
     return l_index
-print(where(s, ch))
+
+a = 123
+print (a % 100 // 10)

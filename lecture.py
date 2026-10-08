@@ -70,11 +70,26 @@
 #             return True
 #     return False
 
-s = ''
-def echo() -> None:
-    s = input('... ')
+# s = ''
+# def echo() -> None:
+#     s = input('... ')
+#
+#     while s != "stop it!":
+#         print(s)
+#         s = input('... ')
+# echo()
 
-    while s != "stop it!":
-        print(s)
-        s = input('... ')
-echo()
+def differentiate(f: int, x: int) -> float:
+    # f needs to recognize x
+    p = 0
+    h = 1
+    while h != 0:
+        h /= 0.1
+        p = ((f + h) - f) / h
+
+    f = (6 - (x + h)) ** 1/2
+    h = 1
+    while h != 0:
+        h /= 0.1
+        p = ((f + h) - f)/h
+        print(p)

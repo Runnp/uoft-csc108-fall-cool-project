@@ -299,14 +299,46 @@
 #
 
 # Practical Week 4, October 6
-s = 'superconductivity'
+# 1. Determine whether a string ends with the letter “c”.
+s = "abcdefg"
+a = s.endswith("c")
+print(a)
+
+# 2. Determine whether a string contains only letters.
+f = "abcdefg"
+b = f.isalpha()
+print(b)
+
+# 3. Replace every instance of the character “a” with “b”.
+g = "abcdefg"
+c = g.replace("a", "b")
+print(c)
+
+# 4. Given a string composed only of numbers, pad it with zeros on the right side so that it is exactly 6 digits long.
+j = "123"
+e = j.ljust(6, '0')
+print(e)
+
+# 5. Determine whether a string contains only uppercase letters.
+h = "abcdefg"
+d = h.isupper()
+print(d)
+
+# 6. Remove all trailing zeroes from a string composed only of numbers.
+k = "123000"
+i = k.rstrip('0')
+print(i)
+
+
 # for char in s:
 #     print(char)
+s = 'superconductivity'
 for index in range(len(s)):
     r = s[index] + ','
     if index == len(s) - 1:
         r = s[index]
     print(r, end='\t')
+
 
 #  character in s and its index on the same line
 s = 'parsimonious'
@@ -315,41 +347,51 @@ for index in range(len(s)):
 
 #  only the characters in s that are at odd indices.
 for index in range(len(s)):
-    if index == 0 or index % 2 == 1:
+    if index % 2 == 1:
         print(s[index])
+
 
 # def shorter(s1, s2): Given two strings s1 and s2, return the length of the shorter string.
 string_one = "October"
 string_two = "September"
-shortest = "October"
 def shortest(string_one, string_two):
     return string_one if len(string_one) < len(string_two) else string_two
 print(shortest(string_one, string_two))
 
+
 # def later(s1, s2): Given two strings s1 and s2 made up of lowercase letters, return the string that
 # would appear later in the dictionary
-dictionary = ["month", "year", "day", "half_of_day", "decade", "century"]
-string_one = "year"
-string_two = "half_of_day"
-def later(string_one, string_two):
-    if string_one in dictionary and string_two in dictionary:
-        one = dictionary.index(string_one)
-        two = dictionary.index(string_two)
-        return string_one if one > two else string_two
-    return -1
-print(later(string_one, string_two))
+
+string_one = "year" # 121
+string_two = "decade" # 100
+
+if string_one > string_two:
+    print(string_one)
+else:
+    print(string_two)
+
+# dictionary = ["month", "year", "day", "half_of_day", "decade", "century"]
+# def later(string_one, string_two):
+#     if string_one in dictionary and string_two in dictionary:
+#         one = dictionary.index(string_one)
+#         two = dictionary.index(string_two)
+#         return string_one if one > two else string_two
+#     return -1
+# print(later(string_one, string_two))
+
 
 #def without_letter(s, char): Given string s and a single-character string char, return the length
 # of s if char was not in it. Remember that you may not use str.count()
-s = "December"
-char = 'r'
-def without_letters(s, char):
+s = "banana"
+char = 'a'
+def without_letter(s, char):
     leg = 0
     for i in s:
-        if s != char:
+        if i != char:
             leg = leg + 1
-    return leg - 1
-print(without_letters(s, char))
+    return leg
+print(without_letter(s, char))
+
 
 # def remove_character(s, char): Given string s and a single-character string char, return a string consisting of
 # s without any occurences of char.
@@ -362,6 +404,7 @@ def remove_character(s, char):
             see = see + i
     return see
 print(remove_character(s, char))
+
 
 # Given string s and single-character string ch, return the index of the last
 # occurrence of ch in s. For example, where(‘abc’, ‘b’) should return 1.
@@ -377,6 +420,7 @@ def where(s, ch):
     return l_index
 print(where(s, ch))
 
+
 """
 What is one small victory, academic or otherwise,
 that you are proud of this week? 
@@ -386,3 +430,4 @@ enjoying with surviving one month of six course semester. Apart from
 academics, grateful for my family. My relatives from Miami wanted to
 send me a plov because they thought in Canada there is no Ouzbek 
 restaurants. Living with such stories..."""
+

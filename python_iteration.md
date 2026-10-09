@@ -1165,3 +1165,18 @@ class Solution:
             if depth > r:
                 r = depth
         return r
+
+
+* 9/10/26
+* Derivative
+* Lists similar to Str
+* Unlike Str, List is not mutable
+* [1] in [1[1],2,3] - TRUE
+* but [1] in [1,2,3] - FALSE
+* [ ‘a’, ‘b’, ‘c’ ] > [ ‘z’ ] - FALSE
+* dir(list)
+* append adds one element to the list
+* let = [1, 2, 3]
+* let.append(4)
+* let = [1, 2, 3, 4]
+* 

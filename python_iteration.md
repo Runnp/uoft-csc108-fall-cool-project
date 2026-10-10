@@ -1167,6 +1167,7 @@ class Solution:
         return r
 
 
+
 * 9/10/26
 * Derivative
 * Lists similar to Str
@@ -1179,5 +1180,12 @@ class Solution:
 * let = [1, 2, 3]
 * let.append(4)
 * let = [1, 2, 3, 4]
-* 
+* let.append([5,6]) # nested list - [1, 2, 3, 4, [5, 6]]
+* let.extend([7, 8]) # however will result in adding the numbers without nesting - [1, 2, 3, 4, [5, 6], 7, 8]
 
+* xs = [0, 1, 2, 3]
+* x = xs.pop()
+* x
+* >>>3
+* xs
+* >>>[0, 1, 2]

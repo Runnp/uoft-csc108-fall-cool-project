@@ -1189,3 +1189,50 @@ class Solution:
 * >>>3
 * xs
 * >>>[0, 1, 2]
+  > 
+> * 11/09/26
+* These two loops sometimes print different results. Why?
+* i = 0
+* while i < len(s) and not (s[i] in 'aeiouAEIOU'):
+*     print(s[i])
+*     i = i + 1 
+* for char in s:
+*     if not (char in 'aeiouAEIOU'):
+*         print(char)
+* 
+* The for loop looks at every character in s, but the while loop ends as soon a vowel is found.
+* 
+* 
+* def last_vowel(s: str) -> str:
+*     """Return the last vowel in s if one exists; otherwise, return None.
+*     >>> last_vowel("cauliflower")
+*     "e"
+*     >>> last_vowel("pfft")
+*     None
+*     """
+*     i = ________
+*     while i >= 0:
+*         if s[i] in 'aeiouAEIOU':
+*             return s[i]
+*         i = i - 1
+*     return None
+* 0
+* len(s) - 1 : TRUE
+* len(s)
+* 
+* 
+* def build_staircase(n):
+*     result = ""
+*     i = 1
+*     while i <= n:
+*         # add the code for a nested loop here
+*         j = 0
+*         while j < i:
+*             result += '#'
+*             j += 1
+* 		result += "\n"
+*     	i += 1
+*     return result
+* #
+* ##
+* ###

@@ -1236,3 +1236,17 @@ class Solution:
 * #
 * ##
 * ###
+Write a `while` loop that prints 0-99 followed by `Done!`, as follows:
+```
+0
+1
+...
+98
+99
+Done!
+```
+c = 0
+while c < 100:
+    print (c)
+    c += 1
+print ("Done!")

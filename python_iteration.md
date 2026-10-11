@@ -1250,3 +1250,20 @@ while c < 100:
     print (c)
     c += 1
 print ("Done!")
+
+* Write a `while` loop to output: ``` Howdy! Howdy! Howdy! Howdy! ```
+* count = 0
+* while count < 4:
+*     print("Howdy!")
+*     count += 1
+* 
+Change the number on line 4 to output
+```
+0
+3
+6
+```
+count = 0 
+while count < 7: 
+	print(count) 
+	count += 3

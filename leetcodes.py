@@ -1,77 +1,61 @@
-# class Solution:
-#     def minInsertions(self, s: str) -> int:
-#         insertions = 0
-#         need = 0
-#
-#         for char in s:
-#             if char == '(':
-#                 if need % 2 == 1:
-#                     insertions += 1
-#                     need -= 1
-#
-#                 need += 2
-#
-#             else:
-#                 need -= 1
-#
-#                 if need == -1:
-#                     insertions += 1
-#                     need = 1
-#
-#         return insertions + need
+You
+are
+given
+an
+integer
+array
+nums.You
+may
+rearrange
+the
+elements in any
+order.
 
-class Solution:
-    def minSumSquareDiff(self, nums1: list[int], nums2: list[int], k1: int, k2: int) -> int:
-        # if k1 == 0 and k2 == 0:
-        #     for i in nums1 and i in nums2:
-        #         c = nums1[i] - nums2[i]
-        #         v += (c ** c)
-        #     return (v)
-        # else:
-        #     for n in nums1 and n in nums2:
-        #         if n == nums1[0]:
-        #             n += 1
-        #         if n == nums2[2]:
-        #             n += 1
-        #         r = (nums1[n] - nums2[n]) ** 2
-        #     return r
-        differences = [
-            abs(nums1[i] - nums2[i])
-            for i in range(len(nums1))
-        ]
-        k = k1 + k2
+The
+alternating
+score
+of
+an
+array
+arr is defined as:
 
-        if k >= sum(differences):
-            return 0
+score = arr[0]
+2 - arr[1]
+2 + arr[2]
+2 - arr[3]
+2 + ...
+Return
+an
+integer
+denoting
+the
+maximum
+possible
+alternating
+score
+of
+nums
+after
+rearranging
+its
+elements.
 
-        left = 0
-        right = max(differences)
+Example
+1:
 
-        while left < right:
-            cap = (left + right) // 2
+Input: nums = [1, 2, 3]
 
-            needed = sum(
-                max(d - cap, 0)
-                for d in differences
-            )
+Output: 12
 
-            if needed <= k:
-                right = cap
-            else:
-                left = cap + 1
+Explanation:
 
-        cap = left
-        used = 0
-        answer = 0
+A
+possible
+rearrangement
+for nums is[2, 1, 3], which gives the maximum alternating score among all possible rearrangements.
 
-        for d in differences:
-            reduced = min(d, cap)
-            used += d - reduced
-            answer += reduced ** 2
+The
+alternating
+score is calculated as:
 
-        remaining = k - used
-        saving_per_operation = cap ** 2 - (cap - 1) ** 2
-
-        answer -= remaining * saving_per_operation
-
-        return answer
+score = 22 - 12 + 32 = 4 - 1 + 9 = 12

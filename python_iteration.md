@@ -1267,3 +1267,52 @@ count = 0
 while count < 7: 
 	print(count) 
 	count += 3
+
+
+* 
+* 
+* a = [0, 1, 2]
+* b = a
+* b[2] = 100 After the code above is executed, which of the following expressions evaluate to True? Select those expression(s).
+* 
+* a == [0, 1, 2] and b == [0, 1, 100]
+* 
+* a == [0, 1, 2] and b == [0, 100, 2]
+* 
+* a == [0, 1, 100] and b == [0, 1, 100] - TRUE
+* 
+* id(a) == id(b) - TRUE
+* 
+* 
+* 
+* 
+* def collect_underperformers(nums: list[int], threshold: int) -> list[int]:
+*     """Return a new list consisting of those numbers in nums that are
+*     below threshold, in the same order as in nums.
+*     >>> collect_underperformers([1, 2, 3, 4], 3)
+*     [1, 2]
+*     >>> collect_underperformers([1, 2, 108, 3, 4], 50)
+*     [1, 2, 3, 4]
+*     >>> collect_underperformers([], 7)
+*     []
+*     """
+*     r = []
+*     for i in nums:
+*         if i < threshold:
+*           r.append(i)
+*     return r
+*             
+* 
+* 
+* 
+* def rotate_list(l: list) -> None:
+*     """ Shift every element in l one spot to the left, moving the first element to the end.
+*     >>> l = [1, 2, 3, 4, 5]
+*     >>> rotate_list(l)
+*     >>> l
+*     [2, 3, 4, 5, 1]
+*     """
+* 	if len(l) > 0:
+*         f = l.pop(0)
+*         l.append(f)
+*     return l        

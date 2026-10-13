@@ -8,3 +8,6 @@
 # 3. Which year had the highest personal remittances received
 #    as a percentage of GDP between 2005 and 2025?
 """
+
+import csv
+open(World_Bank_Data_Uzbekistan.csv)

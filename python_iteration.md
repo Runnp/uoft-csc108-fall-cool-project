@@ -1650,3 +1650,49 @@ while count < 7:
 * 
 * b == [0, 1, 8]
 * 
+*     # CODE MISSING HERE
+*         
+*     return pairs
+*  Select the code fragment(s) that make the function above match its docstring description.
+* 
+*     for i in range(len(list1)):
+*         pairs.append([list1[i], list2[i]]) - TRUE
+* 
+*     inner_list = []
+*     for i in range(len(list1)):
+*         inner_list.append(list1[i])
+*         inner_list.append(list2[i])
+*         pairs.append(inner_list) - FALSE - i = ['A', 1, 'B', 2, 'C', 3]
+* 
+*     for i in range(len(list1)):
+*         inner_list = []
+*         inner_list.append(list1[i])
+*         inner_list.append(list2[i])
+*         pairs.append(inner_list)  - TRUE
+* 
+* 
+* 
+* 
+* Consider this code: a = [1, 0]  All of the following code fragments cause a to refer to [1, 0, 8].  Select all of the code fragment(s) that create a new list.
+* 
+* a.append(8)
+* 
+* a = a + [8] - TRUE
+* 
+* a.insert(len(a), 8)
+* 
+* a = [a[0], a[1], 8] - TRUE
+* 
+* 
+* 
+* 
+* a = [1, 0, 8]
+* b = a.sort() After the code above is executed, which of the following expressions evaluate to True? Select those expression(s).
+* a == [1, 0, 8]
+* 
+* a == [0, 1, 8] - TRUE
+* 
+* b == [1, 0, 8]
+* 
+* b == [0, 1, 8]
+* 

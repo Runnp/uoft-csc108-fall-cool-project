@@ -1,13 +1,10 @@
 """"
-# 1. By what percentage did inflation-adjusted GDP per capita
-#    change in Uzbekistan between 1991 and 2025?
+1. How did Uzbekistan’s international trade evolve as a share of GDP?
 
-# 2. Which year had the lowest annual GDP growth rate
-#    in Uzbekistan between 1991 and 2025?
+2. How did foreign direct investment vary relative to Uzbekistan's economy?
 
-# 3. Which year had the highest personal remittances received
-#    as a percentage of GDP between 2005 and 2025?
+3. How did Uzbekistan’s inflation-adjusted GDP per person change?
 """
 
 import csv
-open(World_Bank_Data_Uzbekistan.csv)
+open(World_Bank_Data_Uzbekistan)

@@ -1316,3 +1316,337 @@ while count < 7:
 *         f = l.pop(0)
 *         l.append(f)
 *     return l        
+* ###
+* 
+* 
+* Write a `while` loop that prints 0-99 followed by `Done!`, as follows:
+* ```
+* 0
+* 1
+* ...
+* 98
+* 99
+* Done!
+* ```
+* c = 0
+* while c < 100:
+*     print (c)
+*     c += 1
+* print ("Done!")
+* 
+* 
+* Write a `while` loop to output: ``` Howdy! Howdy! Howdy! Howdy! ```
+* count = 0
+* while count < 4:
+*     print("Howdy!")
+*     count += 1
+* 
+* 
+* If grades refers to [60, 70], select the statement(s) that will change the list to be [60, 70, 80, 90]. Here is documentation for append and extend:
+* L.append(object) -> NoneType
+*     Append object to end of list L.
+* L.extend(iterable) -> NoneType
+*     Extend list L by appending elements from the iterable. Strings and lists are
+*     iterables whose elements are characters and list items respectively.
+* 
+* grades = grades.append(80)
+* grades = grades.append(90)
+* 
+* grades.append([80, 90])
+* 
+* grades.append(80)
+* grades.append(90) - TRUE
+* 
+* grades.extend(80, 90)
+* 
+* grades.extend([80, 90]) - TRUE
+* 
+* 
+* 
+* 
+* If grades refers to [70, 60, 75, 60], select the statement(s) that will remove one of the 60 values from the list. Here is documentation for pop and remove:
+* list.pop()
+*     remove and return the item at the end of the list
+*     (optional index to remove from anywhere)
+* list.remove(object)
+*     remove the first occurrence of the object; error if not there
+* grades.pop() - TRUE
+* 
+* grades.pop(60)
+* 
+* grades.pop(1) - TRUE
+* 
+* grades.remove(60) - TRUE
+* 
+* 
+* 
+* 
+* What will grades refer to after this code is executed?
+* grades = [80, 70, 60, 90]
+* grades.sort()
+* grades.insert(1, 95)
+* 
+* [60, 70, 80, 90, 95]
+* 
+* [95, 60, 70, 80, 90]
+* 
+* [60, 95, 80, 90]
+* 
+* [60, 95, 70, 80, 90] - TRUE
+* 
+* 
+* 
+* 
+* def interrupted(s):
+*     s[-1] = "-"
+*     
+* greeting = "how are you"
+* interrupted(greeting)
+* print(greeting)
+* 
+* how are yo- is printed
+* 
+* how are you is printed
+* 
+* Python raises an error - TRUE
+* 
+* 
+* 
+* 
+* What does sum_items([1, 2], [2, 4, 2]) produce? (Note that these arguments violate our precondition that len(list1) == len(list2). Normally we don't worry about our functions' behaviour on such inputs.)
+* def sum_items(list1, list2):
+*     sum_list = []
+*     for i in range(len(list1)):
+*         sum_list.append(list1[i] + list2[i])
+*   
+*     return sum_list
+* 
+* It will raise an error as a result of an illegal index.
+* 
+* [3, 6, 2]
+* 
+* [3, 6] - TRUE
+* 
+* [3, 6, 0]
+* 
+* 
+* 
+* 
+* Imagine we want to modify count_matches (reproduced below) to count the number of matching elements in two lists. For example count_matches([1, 2, 3], [5, 2, 3]) should evaluate to 2. Select the option(s) below that would need to be changed in order to make the function do this.
+* def count_matches(s1: str, s2: str) -> int:
+*     """Return the number of positions in s1 that contain the same character at the
+*     corresponding position of s2.  
+* 
+*     Precondition: len(s1) == len(s2) 
+*     """
+* 
+*     num_matches = 0
+*     for i in range(len(s1)):
+*         if s1[i] == s2[i]:
+*             num_matches = num_matches + 1
+*     return num_matches
+* 
+* 
+* 
+* 
+* for metal in ['Li', 'Na']:
+*     for gas in ['F', 'Cl', 'Br']:
+*         print(metal + gas)
+* 
+* LiF
+* LiCl
+* LiBr
+* NaF
+* NaCl
+* NaBr
+* 
+* 
+* 
+* 
+* What is printed by this code? 
+* def mystery(lst):
+*     for sublist in lst:
+*         total = 0
+*         for num in sublist:
+*             total = total + num
+*             
+*     return total
+*     
+* print(mystery([[10, 20], [20], [40, 10]]))
+* 
+* 20
+* 
+* 30
+* 
+* 50 - TRUE
+* 
+* 100
+* 
+* 
+* How would you modify the code so that it calculates the total of all even numbers in the list of lists?
+* Add if lst[i][j] % 2 == 0: total += lst[i][j]
+* 
+* 
+* Consider this code:
+* >>> letters = ['b', 'd', 'a']
+* >>> # MISSING CODE HERE
+* >>> print(letters)
+* ['a', 'b', 'd'] Which of the following code fragments(s) could be the missing code in the program above?
+* 
+* letters = sort(letters)
+* 
+* sort(letters) - TRUE
+* 
+* letters.sort()
+* 
+* 
+* 
+* 
+* ['Lola', 'Venus', 'Lola', 'Lola', 'Let It Be', 'Lola', 'ABC', 'Cecilia', 'Lola', 'Lola']
+* You want to make sure that Lola only gets played 3 times, so you want to complete this function that edits the playlist:
+* def cap_song_repetition(playlist: list[str], song: str) -> None:
+*     """Make sure there are no more than 3 occurrences of song in playlist.
+*     """
+* Select the loop(s) that accomplish this.
+* 
+*     while playlist.count(song) > 3:
+*         playlist.remove(song)
+* - TRUE
+* 
+*     while playlist.count(song) > 3:
+*         playlist.remove(playlist.index(song))
+* 
+*     while playlist.count(song) >= 3:
+*         playlist.remove(song)
+* 
+*     while playlist.count(song) > 3:
+*         playlist.pop(song)
+* 
+*     while playlist.count(song) > 3:
+*         playlist.pop(playlist.index(song))
+* - TRUE
+* 
+* 
+* 
+* 
+* >>> a = [1, 2, 3]
+* >>> b = a
+* >>> # MISSING CODE HERE
+* >>> print(a, b)
+* [1, 'A', 3] [1, 'A', 3] Which of the following code fragments(s) could be the missing code in the program above?
+* 
+* a[1] = 'A'
+* 
+* b[-2] = 'A'
+* 
+* b[1] = 'AB'
+* a[1] = a[1][0]
+* 
+* a = [1, 'A', 3]
+* b = [1, 'A', 3]
+* 
+* ALL CORRECT
+* 
+* 
+* 
+* 
+* This for loop prints the even numbers from 2 to 8 inclusive: 
+* 
+* for ch in '123456789':
+*     num = int(ch)
+*     if num % 2 == 0:
+*         print(num)
+*   Select the while loop code fragment(s) that print(s) the same numbers.
+* 
+* i = 0
+* while i < 8:
+*     i = i + 2
+*     print(i)
+* G
+* G
+* G
+* G
+* def contains(value: object, lst: list[list]) -> bool:
+*     """Return whether value is an element of one of the nested lists in lst.
+*     >>> contains('moogah', [[70, 'blue'], [1.24, 90, 'moogah'], [80, 100]])
+*     True
+*     """
+*     found = False  # We have not yet found value in the list.
+* 
+*     # CODE MISSING HERE
+* 
+*     return found Select the code fragment(s) that make the function above match its docstring description.  (Recall that type object includes values of all Python types.)
+* 
+*     for i in range(len(lst)):
+*         for j in range(len(lst[i])):
+*             found = (lst[i][j] == value)
+* 
+*     for sublist in lst:
+*         if value in sublist:
+*             found = True
+* - TRUE
+* 
+*     for i in range(len(lst)):
+*         for j in range(len(lst[i])):
+*             if lst[i][j] == value:
+*                 found = True
+* - TRUE
+* 
+* 
+* 
+* 
+* def make_pairs(list1: list[str], list2: list[int]) -> list[list]:
+*     """Return a new list in which each item is a 2-item list with the string from the
+*     corresponding position of list1 and the int from the corresponding position of list2.
+*     Precondition: len(list1) == len(list2)
+*     >>> make_pairs(['A', 'B', 'C'], [1, 2, 3])
+*     [['A', 1], ['B', 2], ['C', 3]]
+*     """
+*     pairs = []
+*     
+*     # CODE MISSING HERE
+*         
+*     return pairs
+*  Select the code fragment(s) that make the function above match its docstring description.
+* 
+*     for i in range(len(list1)):
+*         pairs.append([list1[i], list2[i]]) - TRUE
+* 
+*     inner_list = []
+*     for i in range(len(list1)):
+*         inner_list.append(list1[i])
+*         inner_list.append(list2[i])
+*         pairs.append(inner_list) - FALSE - i = ['A', 1, 'B', 2, 'C', 3]
+* 
+*     for i in range(len(list1)):
+*         inner_list = []
+*         inner_list.append(list1[i])
+*         inner_list.append(list2[i])
+*         pairs.append(inner_list)  - TRUE
+* 
+* 
+* 
+* 
+* Consider this code: a = [1, 0]  All of the following code fragments cause a to refer to [1, 0, 8].  Select all of the code fragment(s) that create a new list.
+* 
+* a.append(8)
+* 
+* a = a + [8] - TRUE
+* 
+* a.insert(len(a), 8)
+* 
+* a = [a[0], a[1], 8] - TRUE
+* 
+* 
+* 
+* 
+* a = [1, 0, 8]
+* b = a.sort() After the code above is executed, which of the following expressions evaluate to True? Select those expression(s).
+* a == [1, 0, 8]
+* 
+* a == [0, 1, 8] - TRUE
+* 
+* b == [1, 0, 8]
+* 
+* b == [0, 1, 8]
+* 

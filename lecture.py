@@ -93,18 +93,21 @@
 #         h /= 0.1
 #         p = ((f + h) - f)/h
 #         print(p)
+#
+# def find_derivative_v2() -> None:
+#     tolerance = 10 ** (-4)
+#     i = 0
+#     h = 10 ** (-1*i)
+#     x = 2
+#     prev_value = 0
+#     f_prime = ((6 - (x+ h)) ** (0.5) - (6 - x) ** (0.5)) / h
+#     print("f'(" + str(x) + ") =" + str(f_prime) + "for h =" + str(h))
+#     while abs(f_prime - prev_value) > tolerance:
+#         i += 1
+#         h = 10 ** (-1 * i)
+#         f_prime = ((6 - (x + h)) ** (0.5) - (6 - x) ** (0.5)) / h
+#         prev_value = f_prime
+#     return f_prime
 
-def find_derivative_v2() -> None:
-    tolerance = 10 ** (-4)
-    i = 0
-    h = 10 ** (-1*i)
-    x = 2
-    prev_value = 0
-    f_prime = ((6 - (x+ h)) ** (0.5) - (6 - x) ** (0.5)) / h
-    print("f'(" + str(x) + ") =" + str(f_prime) + "for h =" + str(h))
-    while abs(f_prime - prev_value) > tolerance:
-        i += 1
-        h = 10 ** (-1 * i)
-        f_prime = ((6 - (x + h)) ** (0.5) - (6 - x) ** (0.5)) / h
-        prev_value = f_prime
-    return f_prime
+file = open("/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/stixi.txt", "r")
+print(file.readlines())

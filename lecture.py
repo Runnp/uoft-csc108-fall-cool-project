@@ -109,5 +109,12 @@
 #         prev_value = f_prime
 #     return f_prime
 
-file = open("/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/stixi.txt", "r")
-print(file.readlines())
+
+file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/stixi.txt"
+def count_a(file: str) -> int:
+    with open(file, "r") as f:
+        lines = f.read()
+        count = lines.count("a")
+    return count
+
+print(count_a(file))

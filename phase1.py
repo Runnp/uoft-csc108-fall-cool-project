@@ -1,10 +1,14 @@
 """"
-1. How did Uzbekistan’s international trade evolve as a share of GDP?
+Uzbekistan's Economy in International Market:
+Trends and Trade Balance Between 1997-2025
 
-2. How did foreign direct investment vary relative to Uzbekistan's economy?
+How did Uzbekistan’s international trade evolve as a share of GDP?
 
-3. How did Uzbekistan’s inflation-adjusted GDP per person change?
+How did foreign direct investment vary relative to Uzbekistan's economy?
+
+How did Uzbekistan’s inflation-adjusted GDP per person change?
 """
 
 import csv
-open(World_Bank_Data_Uzbekistan)
+file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/World_Bank_Data_Uzbekistan.csv"
+

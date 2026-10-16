@@ -21,3 +21,9 @@ Explanation: Six possible subarrays are:
 [2,1]: 2 distinct values
 [1,2,1]: 2 distinct values
 The sum of the squares of the distinct counts in all subarrays is equal to 12 + 12 + 12 + 22 + 22 + 22 = 15.
+s = 0
+for i in nums:
+    for j in i:
+        i = j ** i
+        s += i
+    return s

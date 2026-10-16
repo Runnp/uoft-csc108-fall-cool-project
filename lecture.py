@@ -134,6 +134,7 @@ def num_empty_lines(file: str) -> int:
 
 print(num_empty_lines(file))
 
+
 song = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/song.txt"
 def obtain_song(song: str) -> list[str]:
     """
@@ -148,3 +149,18 @@ def obtain_song(song: str) -> list[str]:
             words.append(line.strip())
     return words
 print(obtain_song(song))
+
+csv = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/musicians.csv"
+def highest_rated_musician(csv: str) -> str:
+    """
+    Return the highest rated musician from the csv file.
+    :param csv:
+    :return:
+    """
+    with open(csv, "r") as f:
+        f.readlines()
+        high_rated_musicians = 0
+        answer = ''
+        musicians = []
+        for line in lines:
+            musicians.append(line.strip())

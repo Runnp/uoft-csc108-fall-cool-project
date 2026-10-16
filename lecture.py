@@ -162,5 +162,14 @@ def highest_rated_musician(csv: str) -> str:
         high_rated_musicians = 0
         answer = ''
         musicians = []
-        for line in lines:
-            musicians.append(line.strip())
+        for line in f:
+            line = line.strip(",")
+            musicians_name = line[0]
+            musicians_rating = int(line[1])
+
+            if musicians_rating > high_rated_musicians:
+                answer = musicians_name
+                high_rated_musicians = musicians_rating
+
+    return answer
+print(highest_rated_musician(csv))

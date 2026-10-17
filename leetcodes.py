@@ -1,97 +1,18 @@
-You
-are
-given
-an
-array
-nums
-of
-distinct
-positive
-integers.You
-need
-to
-sort
-the
-array in increasing
-order
-based
-on
-the
-sum
-of
-the
-digits
-of
-each
-number.If
-two
-numbers
-have
-the
-same
-digit
-sum, the
-smaller
-number
-appears
-first in the
-sorted
-order.
-
-Return
-the
-minimum
-number
-of
-swaps
-required
-to
-rearrange
-nums
-into
-this
-sorted
-order.
-
-A
-swap is defined as exchanging
-the
-values
-at
-two
-distinct
-positions in the
-array.
-
-Example
-1:
-
-Input: nums = [37, 100]
-
-Output: 1
-
-Explanation:
-
-Compute
-the
-digit
-sum
-for each integer: [3 + 7 = 10, 1 + 0 + 0 = 1] → [10, 1]
-Sort
-the
-integers
-based
-on
-digit
-sum: [100, 37].Swap
-37
-with 100 to obtain the sorted order.
-Thus, the
-minimum
-number
-of
-swaps
-required
-to
-rearrange
-nums is 1.
+class Solution:
+    def minSwaps(self, nums: List[int]) -> int:
+        target = sorted(nums, key=lambda x: (sum(int(d) for d in str(x)), x))
+        pos = {val: i for i, val in enumerate(target)}
+        vis = [False] * len(nums)
+        swap_count = 0
+        for i in range(len(nums)):
+            if vis[i] or pos[nums[i]] == i:
+                continue
+            cycle_size = 0
+            j = i
+            while not vis[j]:
+                vis[j] = True
+                j = pos[nums[j]]
+                cycle_size += 1
+            if cycle_size > 0:
+                swap_count += (cycle_size - 1)
+        return swap_count

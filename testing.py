@@ -1,8 +1,5 @@
-a = [0, 1, 2]
-b = a
-b[2] = 100
+def minSwaps(nums: list[int]) -> int:
+        digit_sums = [sum(int(digit) for digit in str(num)) for num in nums]
+        return(digit_sums)
 
-print(a == [0, 1, 2] and b == [0, 1, 100])
-print(a == [0, 1, 2] and b == [0, 100, 2])
-print(a == [0, 1, 100] and b == [0, 1, 100])
-print(id(a) == id(b))
+print(minSwaps(nums = [13, 56, 75, 345, 2113]))

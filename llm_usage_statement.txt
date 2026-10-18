@@ -1,0 +1,5 @@
+Disclaimer: No AI was used in writing, designing, and programing this project.
+The progress can be seen in my GitHub repository for this course, if necessary.
+The diagram I myself drew on Miro, the code I wrote in PyCharm, and the video
+I recorded using native Apple software.
+https://github.com/runnp/uoft-csc108-fall-cool-project.git

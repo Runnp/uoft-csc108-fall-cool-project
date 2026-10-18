@@ -14,15 +14,16 @@ Problem Decomposition Functions:
 3. calculate_export_value - calculate export value of domestic goods and services
 4. calculate_import_value - calculate import value of goods and services produced abroad
 5. run_analysis - print a clear answer to research questions with outputs from functions above
-My diagram represents inputs, outputs, descriptions in more detail. Refer to Diagram Uzbekistan Economy.jpg
+My diagram represents inputs, outputs, descriptions in more detail. Refer to decomp_image.png
 ---------------------------------------------------------
 Dataset: World_Bank_Data_Uzbekistan.csv
+Source: World Bank Open Data
 Link: https://data.worldbank.org/country/uzbekistan
 Note: The dataset comes in archive with three files:
 * Metadata_Country_API_UZB_DS2_en_csv_v2_385286.csv
 * API_UZB_DS2_en_csv_v2_385286.csv - IMPORTANT: We are using this file ONLY
 * Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv
-We have real data only in API_UZB_DS2_en_csv_v2_385286.csv, which I renamed into World_Bank_Data_Uzbekistan.csv
+IMPORTANT: We have real data only in API_UZB_DS2_en_csv_v2_385286.csv that I renamed into World_Bank_Data_Uzbekistan.csv
 From other two files, Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv includes explanations and meanings of every
 indicator codes inside our World_Bank_Data_Uzbekistan.csv. However, I put the needed indicators inside this program:
 IMPORTANT:
@@ -30,10 +31,6 @@ NE.EXP.GNFS.CD - Exports of goods and services
 NE.IMP.GNFS.CD - Imports of goods and services
 BX.KLT.DINV.CD.WD - Foreign direct investment, net inflows
 Notice: These values are calculated in USD currency and are not inflation-adjusted.
----------------------------------------------------------
-Disclaimer: No AI was used in writing, designing, and programing this project.
-The progress can be seen in my GitHub repository for this course, if necessary.
-https://github.com/runnp/uoft-csc108-fall-cool-project.git
 ---------------------------------------------------------
 Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
 =======================Thanks you========================
@@ -130,6 +127,8 @@ def run_analysis(filename: str, start_year: int, end_year: int) -> None:
     """
     Renders Uzbekistan's change in economic data between two years.
     Visualizes the findings in text bar chart.
+    Each block represents approximately $1 billion.
+    Positive values below $1 billion are shown as one block.
     Precondition: start_year and end_year are integers and are available in dataset.
     """
     investment_years, investments = read_data(csv_file, INVESTMENT_CODE)
@@ -142,28 +141,67 @@ def run_analysis(filename: str, start_year: int, end_year: int) -> None:
     import_result = calculate_import_value(import_years, import_values, start_year, end_year)
 
     print("UZBEKISTAN'S ECONOMY IN INTERNATIONAL MARKET")
-    print("Period: ", start_year, "-", end_year)
-    print("Each '|' represents $1 billion")
+    print("Period:", start_year, "-", end_year)
 
     print("\nFOREIGN DIRECT INVESTMENT")
     print("Initial value: $", investment_result[0])
     print("Final value: $", investment_result[1])
+    print(start_year, ":", "█" * max(1, int(investment_result[0] / 1_000_000_000)))
+    print(end_year, ":", "█" * int(investment_result[1] / 1_000_000_000))
     print("Dollar change: $", investment_result[2])
 
     print("\nEXPORTS")
     print("Initial value: $", export_result[0])
     print("Final value: $", export_result[1])
+    print(start_year, ":", "█" * int(export_result[0] / 1_000_000_000))
+    print(end_year, ":", "█" * int(export_result[1] / 1_000_000_000))
     print("Dollar change: $", export_result[2])
 
     print("\nIMPORTS")
     print("Initial value: $", import_result[0])
     print("Final value: $", import_result[1])
+    print(start_year, ":", "█" * int(import_result[0] / 1_000_000_000))
+    print(end_year, ":", "█" * int(import_result[1] / 1_000_000_000))
     print("Dollar change: $", import_result[2])
 
-    """
-    █
-    """
+    print("\nANSWERS TO RESEARCH QUESTIONS")
+    print("How has the value of Uzbekistan’s exports evolved during the given period?")
+    print("- Uzbekistan's exports of goods and services increased from",
+          round(export_result[0] / 1_000_000_000, 2),
+          "billion USD in", start_year, "to",
+          round(export_result[1] / 1_000_000_000, 2),
+          "billion USD in", str(end_year) + ".")
+    print("This represents an increase of",
+          round(export_result[2] / 1_000_000_000, 2), "billion USD.")
+    print("By", end_year, "exports were approximately",
+          round(export_result[1] / export_result[0], 1),
+          "times their", start_year, "value.")
 
+    print("\nHow has Uzbekistan’s spending on imported goods and services changed?")
+    print("- Uzbekistan's spending on imported goods and services increased from",
+          round(import_result[0] / 1_000_000_000, 2),
+          "billion USD in", start_year, "to",
+          round(import_result[1] / 1_000_000_000, 2),
+          "billion USD in", str(end_year) + ".")
+    print("This renders an increase of",
+          round(import_result[2] / 1_000_000_000, 2),
+          "billion USD.")
+    print("By", end_year, "imports were approximately",
+          round(import_result[1] / import_result[0], 1),
+          "times their", start_year, "value.")
+
+    print("\nHow much more or less foreign direct investment has Uzbekistan attracted?")
+    print("- Uzbekistan's annual foreign direct investment net inflows increased from",
+          round(investment_result[0] / 1_000_000, 2),
+          "million USD in", start_year, "to",
+          round(investment_result[1] / 1_000_000_000, 2),
+          "billion USD in", str(end_year) + ".")
+    print("This illustrates an increase of",
+          round(investment_result[2] / 1_000_000_000, 2),
+          "billion USD.")
+    print("By", end_year, "foreign direct investment net inflows were approximately",
+          round(investment_result[1] / investment_result[0], 1),
+          "times their", start_year, "value.")
 
 
 if __name__ == "__main__":

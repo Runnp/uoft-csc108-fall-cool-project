@@ -95,14 +95,59 @@ def calculate_investment_value(years: list, investment_values: list, start_year:
 
     return start_value, end_value, change
 
+
+def calculate_export_value(years: list, export_values: list, start_year: int, end_year: int) -> tuple:
+    """
+    Returns starting, ending, and change in export values between two years.
+    Precondition: start_year and end_year are integers.
+    """
+    start_index = years.index(start_year)
+    end_index = years.index(end_year)
+
+    start_value = export_values[start_index]
+    end_value = export_values[end_index]
+
+    change_exports = end_value - start_value
+    return start_value, end_value, change_exports
+
+
+def calculate_import_value(years: list, export_values: list, start_year: int, end_year: int) -> tuple:
+    """
+    Returns starting, ending, and change in import values between two years.
+    Precondition: start_year and end_year are integers.
+    """
+    start_index = years.index(start_year)
+    end_index = years.index(end_year)
+
+    start_value = export_values[start_index]
+    end_value = export_values[end_index]
+
+    change_imports = end_value - start_value
+    return start_value, end_value, change_imports
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
 
-    years, investments = read_data(csv_file, INVESTMENT_CODE)
-    print("Years: ", years)
-    if 1997 in years and 2025 in years:
-        result = calculate_investment_value(years, investments, 1997, 2025)
-        print("Results: ", result)
+    investment_years, investments = read_data(csv_file, INVESTMENT_CODE)
+    export_years, export_values = read_data(csv_file, EXPORT_CODE)
+    import_years, import_values = read_data(csv_file, IMPORT_CODE)
+
+    start_year = 1997
+    end_year = 2025
+
+    if start_year in investment_years and end_year in investment_years:
+        print("Investment: ", calculate_investment_value(investment_years, investments, start_year, end_year))
+    else:
+        print("Missing from the investment data...")
+
+    if start_year in export_years and end_year in export_years:
+        print("Exporting: ", calculate_export_value(export_years, export_values, start_year, end_year))
+    else:
+        print("Missing from the investment data...")
+
+    if start_year in import_years and end_year in import_years:
+        print("Importing: ", calculate_import_value(import_years, import_values, start_year, end_year))
     else:
         print("Missing from the investment data...")

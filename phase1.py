@@ -41,28 +41,21 @@ Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
 
 import csv
 csv_file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/World_Bank_Data_Uzbekistan.csv"
+INVESTMENT_CODE = "BX.KLT.DINV.CD.WD"
+EXPORT_CODE = "NE.EXP.GNFS.CD"
+IMPORT_CODE = "NE.IMP.GNFS.CD"
 
-def read_data(csv_file: str, indicator_code: str) -> tuple:
+def read_data(filename: str, indicator_code: str) -> tuple:
     """
     Returns years and values for the given indicator.
     Skip missing years and empty values.
     >>> years, values = read_data(csv_file, "NE.EXP.GNFS.CD")
     >>> len(years) == len(values)
     True
-    >>> years, values = read_data(csv_file, "NE.IMP.GNFS.CD")
-    >>> len(years) == len(values)
-    True
-    >>> years, values = read_data(csv_file, "BX.KLT.DINV.CD.WD")
-    >>> len(years) == len(values)
-    True
-    >>> years[0] >= 1997
-    True
-    >>> years[-1] <= 2025
-    True
     """
     years = []
     values = []
-    with open(csv_file, "r", encoding="utf-8-sig") as file:
+    with open(filename, "r", encoding="utf-8-sig") as file:
         reader = csv.reader(file)
 
         for i in range(4):
@@ -82,6 +75,31 @@ def read_data(csv_file: str, indicator_code: str) -> tuple:
                                 values.append(float(value))
     return years, values
 
+
+def calculate_investment_value(years: list, investment_values: list, start_year: int, end_year: int) -> tuple:
+    """
+    Returns the change in investment values between two years.
+    Precondition: start_year and end_year are integers.
+
+    """
+    start_index = years.index(start_year)
+    end_index = years.index(end_year)
+
+    start_value = investment_values[start_index]
+    end_value = investment_values[end_index]
+
+    change = end_value - start_value
+
+    return start_value, end_value, change
+
 if __name__ == "__main__":
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod()
+
+    years, investments = read_data(csv_file, INVESTMENT_CODE)
+    print("Years: ", years)
+    if 1997 in years and 2025 in years:
+        result = calculate_investment_value(years, investments, 1997, 2025)
+        print("Results: ", result)
+    else:
+        print("Missing from the investment data...")

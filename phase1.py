@@ -42,14 +42,23 @@ Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
 import csv
 csv_file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/World_Bank_Data_Uzbekistan.csv"
 
-def read_data(filename: str, indicator_code: str) -> tuple:
+def read_data(csv_file: str, indicator_code: str) -> tuple:
     """
     Returns years and values for the given indicator.
     Skip missing years and empty values.
-
-    :param csv_file:
-    :param indicator_code:
-    :return:
+    >>> years, values = read_data(csv_file, "NE.EXP.GNFS.CD")
+    >>> len(years) == len(values)
+    True
+    >>> years, values = read_data(csv_file, "NE.IMP.GNFS.CD")
+    >>> len(years) == len(values)
+    True
+    >>> years, values = read_data(csv_file, "BX.KLT.DINV.CD.WD")
+    >>> len(years) == len(values)
+    True
+    >>> years[0] >= 1997
+    True
+    >>> years[-1] <= 2025
+    True
     """
     years = []
     values = []
@@ -72,3 +81,7 @@ def read_data(filename: str, indicator_code: str) -> tuple:
                                 years.append(int(year))
                                 values.append(float(value))
     return years, values
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)

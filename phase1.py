@@ -126,28 +126,47 @@ def calculate_import_value(years: list, export_values: list, start_year: int, en
     return start_value, end_value, change_imports
 
 
+def run_analysis(filename: str, start_year: int, end_year: int) -> None:
+    """
+    Renders Uzbekistan's change in economic data between two years.
+    Visualizes the findings in text bar chart.
+    Precondition: start_year and end_year are integers and are available in dataset.
+    """
+    investment_years, investments = read_data(csv_file, INVESTMENT_CODE)
+    investment_result = calculate_investment_value(investment_years, investments, start_year, end_year)
+
+    export_years, export_values = read_data(csv_file, EXPORT_CODE)
+    export_result = calculate_export_value(export_years, export_values, start_year, end_year)
+
+    import_years, import_values = read_data(csv_file, IMPORT_CODE)
+    import_result = calculate_import_value(import_years, import_values, start_year, end_year)
+
+    print("UZBEKISTAN'S ECONOMY IN INTERNATIONAL MARKET")
+    print("Period: ", start_year, "-", end_year)
+    print("Each '|' represents $1 billion")
+
+    print("\nFOREIGN DIRECT INVESTMENT")
+    print("Initial value: $", investment_result[0])
+    print("Final value: $", investment_result[1])
+    print("Dollar change: $", investment_result[2])
+
+    print("\nEXPORTS")
+    print("Initial value: $", export_result[0])
+    print("Final value: $", export_result[1])
+    print("Dollar change: $", export_result[2])
+
+    print("\nIMPORTS")
+    print("Initial value: $", import_result[0])
+    print("Final value: $", import_result[1])
+    print("Dollar change: $", import_result[2])
+
+    """
+    █
+    """
+
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-
-    investment_years, investments = read_data(csv_file, INVESTMENT_CODE)
-    export_years, export_values = read_data(csv_file, EXPORT_CODE)
-    import_years, import_values = read_data(csv_file, IMPORT_CODE)
-
-    start_year = 1997
-    end_year = 2025
-
-    if start_year in investment_years and end_year in investment_years:
-        print("Investment: ", calculate_investment_value(investment_years, investments, start_year, end_year))
-    else:
-        print("Missing from the investment data...")
-
-    if start_year in export_years and end_year in export_years:
-        print("Exporting: ", calculate_export_value(export_years, export_values, start_year, end_year))
-    else:
-        print("Missing from the investment data...")
-
-    if start_year in import_years and end_year in import_years:
-        print("Importing: ", calculate_import_value(import_years, import_values, start_year, end_year))
-    else:
-        print("Missing from the investment data...")
+    run_analysis(csv_file, 1997, 2025)

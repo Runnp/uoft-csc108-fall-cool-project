@@ -80,7 +80,10 @@ def calculate_investment_value(years: list, investment_values: list, start_year:
     """
     Returns the change in investment values between two years.
     Precondition: start_year and end_year are integers.
-
+    >>> calculate_investment_value([1997, 2025], [100.0, 500.0], 1997, 2025)
+    (100.0, 500.0, 400.0)
+    >>> calculate_investment_value([1997, 2000], [300.0, 200.0], 1997, 2000)
+    (300.0, 200.0, -100.0)
     """
     start_index = years.index(start_year)
     end_index = years.index(end_year)

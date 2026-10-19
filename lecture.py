@@ -119,57 +119,77 @@
 # print(count_a(file))
 
 
+#
+# file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/stixi.txt"
+# def num_empty_lines(file: str) -> int:
+#     """
+#     Return total number of empty lines in the file.
+#     """
+#     c = 0
+#     with open(file, "r") as f:
+#         for line in f:
+#             if line == "\n":
+#                 c = c + 1
+#     return c
+#
+# print(num_empty_lines(file))
+#
+#
+# song = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/song.txt"
+# def obtain_song(song: str) -> list[str]:
+#     """
+#     Return a list of words from the song file.
+#     :param song:
+#     :return:
+#     """
+#     with open(song, "r") as f:
+#         lines = f.readlines()
+#         words = []
+#         for line in lines:
+#             words.append(line.strip())
+#     return words
+# print(obtain_song(song))
+#
+# csv = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/musicians.csv"
+# def highest_rated_musician(csv: str) -> str:
+#     """
+#     Return the highest rated musician from the csv file.
+#     :param csv:
+#     :return:
+#     """
+#     with open(csv, "r") as f:
+#         f.readlines()
+#         high_rated_musicians = 0
+#         answer = ''
+#         musicians = []
+#         for line in f:
+#             line = line.strip(",")
+#             musicians_name = line[0]
+#             musicians_rating = int(line[1])
+#
+#             if musicians_rating > high_rated_musicians:
+#                 answer = musicians_name
+#                 high_rated_musicians = musicians_rating
+#
+#     return answer
+# print(highest_rated_musician(csv))
 
-file = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/stixi.txt"
-def num_empty_lines(file: str) -> int:
+def freq(in_filename:str, out_filename:str) -> None:
     """
-    Return total number of empty lines in the file.
-    """
-    c = 0
-    with open(file, "r") as f:
-        for line in f:
-            if line == "\n":
-                c = c + 1
-    return c
+    Write the count of each digit found in in_filename to out_filename
 
-print(num_empty_lines(file))
-
-
-song = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/song.txt"
-def obtain_song(song: str) -> list[str]:
-    """
-    Return a list of words from the song file.
-    :param song:
+    Precondition: each line contains exactly one digit
+    :param in_filename:
+    :param out_filename:
     :return:
     """
-    with open(song, "r") as f:
-        lines = f.readlines()
-        words = []
-        for line in lines:
-            words.append(line.strip())
-    return words
-print(obtain_song(song))
+    with open(in_filename,'r') as infile:
+        infile.readline()
+        output = ''
+        for line in infile:
+            if line.isdigit():
+                output += line
+        return output
 
-csv = "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/musicians.csv"
-def highest_rated_musician(csv: str) -> str:
-    """
-    Return the highest rated musician from the csv file.
-    :param csv:
-    :return:
-    """
-    with open(csv, "r") as f:
-        f.readlines()
-        high_rated_musicians = 0
-        answer = ''
-        musicians = []
-        for line in f:
-            line = line.strip(",")
-            musicians_name = line[0]
-            musicians_rating = int(line[1])
+    with open(out_filename,'w') as outifle:
 
-            if musicians_rating > high_rated_musicians:
-                answer = musicians_name
-                high_rated_musicians = musicians_rating
-
-    return answer
-print(highest_rated_musician(csv))

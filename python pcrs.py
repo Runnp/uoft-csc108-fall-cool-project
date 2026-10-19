@@ -63,3 +63,24 @@ name = 'Bob'
 print(f"Hello {name}")
 print("Hello {name}")
 print(f"Hello (name)")
+
+
+def stretch_string(s: str, stretch_factors: list[int]) -> str:
+    """Return a string consisting of the characters in s in the same order
+    as in s, repeated the number of times indicated by the item at the
+    corresponding position of stretch_factors.
+
+    Precondition: len(s) == len(stretch_factors) and the items of
+                  stretch_factors are non-negative
+
+    >>> stretch_string('Hello', [2, 0, 3, 1, 1])
+    'HHllllo'
+    >>> stretch_string('echo', [0, 0, 1, 5])
+    'hooooo'
+    """
+    output = ''
+
+    for i in range(len(s)):
+        output += s[i] * stretch_factors[i]
+
+    return output

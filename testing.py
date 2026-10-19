@@ -16,3 +16,21 @@ def find_letter_n_times(s: str, letter: str, n: int) -> str:
              if count == n:
                 return s[:i + 1]
 
+
+def count_collatz_steps(n: int) -> int:
+        """Return the number of steps it takes to reach 1, by repeating the two
+        steps of the Collatz conjecture beginning from n.
+
+        >>> count_collatz_steps(6)
+        8
+        """
+        i = 0
+
+        while n != 1:
+                if n % 2 == 0:
+                        n = n // 2
+        else:
+                n = n * 3 + 1
+        i += 1
+
+        return i

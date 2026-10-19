@@ -9,13 +9,10 @@ def find_letter_n_times(s: str, letter: str, n: int) -> str:
         """
     if n == 0:
         return ''
+    count = 0
+    for i in range(len(s)):
+        if s[i] == letter:
+             count += 1
+             if count == n:
+                return s[:i + 1]
 
-
-count = 0
-
-for i in range(len(s)):
-    if s[i] == letter:
-        count += 1
-
-        if count == n:
-            return s[:i + 1]

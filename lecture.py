@@ -184,12 +184,16 @@ def freq(in_filename:str, out_filename:str) -> None:
     :return:
     """
     with open(in_filename,'r') as infile:
-        infile.readline()
-        output = ''
+        counts = [0] * 10
         for line in infile:
-            if line.isdigit():
-                output += line
-        return output
+            digit = int(line)
+            counts[digit] += 1
 
     with open(out_filename,'w') as outifle:
+        for digit in range(10):
+            outifle.write(str(counts[digit]))
+
+if __name__ == '__main__':
+    in_filename = 'digits.txt'
+    out_filename = 'frequency.txt'
 

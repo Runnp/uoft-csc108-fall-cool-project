@@ -197,3 +197,21 @@ if __name__ == '__main__':
     in_filename = 'digits.txt'
     out_filename = 'frequency.txt'
 
+
+def split_names(filename: str) -> None:
+    """
+    Write first names into first.txt
+    Write last names into last.txt
+    Precondition: each line contains at least one first and one last name
+
+    :param filename:
+    :return:
+    """
+    with open(filename, 'r') as source:
+        with open('first.txt', 'w') as first:
+            with open('second.txt', 'w') as second:
+                for line in source:
+                    names = line.split()
+
+                    first.write(names[0] + '\n')
+                    second.write(names[1] + '\n')

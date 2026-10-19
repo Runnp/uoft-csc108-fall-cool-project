@@ -215,3 +215,5 @@ def split_names(filename: str) -> None:
 
                     first.write(names[0] + '\n')
                     second.write(names[1] + '\n')
+
+

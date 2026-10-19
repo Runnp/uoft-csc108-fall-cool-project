@@ -84,3 +84,35 @@ def stretch_string(s: str, stretch_factors: list[int]) -> str:
         output += s[i] * stretch_factors[i]
 
     return output
+
+
+def extract_first_letter_reversed(s: str) -> str:
+    """
+    Given a sentence <s>, extract the first letter of every word in the
+    sentence. A word in this context is defined as any continuous segment of
+    alphabetical characters. Return the first letter of every word in reverse.
+
+    Precondition: <s> will contain at least one word.
+
+    >>> extract_first_letter_reversed('simple')
+    's'
+    >>> extract_first_letter_reversed('two words')
+    'wt'
+    >>> extract_first_letter_reversed('Welcome Frank, you are in computer science! :)')
+    'sciayFW'
+    >>> extract_first_letter_reversed('helloworld! How are you?')
+    'yaHh'
+    """
+    selection = ''
+
+
+    start = True
+
+    for char in s:
+        if char.isalpha():
+            if start:
+                selection = char + selection
+                start = False
+        else:
+            start = True
+    return selection

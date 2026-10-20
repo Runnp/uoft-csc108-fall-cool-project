@@ -242,3 +242,17 @@ file.truncate()
 #                 ans += d
 #
 #         return ans
+
+
+# x = 0
+# outer = 0
+# inner = 0
+# while outer < 3:
+#     outer = outer + 1
+#     while inner < 2:
+#         inner = inner + 1
+#         x = x + 1
+#     x = x + 1
+#
+#
+# answer = 5

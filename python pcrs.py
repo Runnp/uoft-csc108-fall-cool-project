@@ -116,3 +116,93 @@ def extract_first_letter_reversed(s: str) -> str:
         else:
             start = True
     return selection
+#
+# What will the contents of cat.txt look like after the following code is executed?
+
+catlines = ["We looked!", "And we saw him!", "The Cat in the Hat!"]
+cat_file = open("cat.txt", "w")
+for line in catlines:
+    cat_file.write(line)
+cat_file.close()
+
+# We looked!And we saw him!The Cat in the Hat!
+
+f = open('budgie_budget.csv')
+
+# Consider this code fragment:
+f.readline()
+for line in f:
+    print(line)
+# Which description best matches this code fragment?
+# prints every line except the first
+
+# Consider this code fragment:
+for line in f:
+    print(line)
+    f.readline()
+# Which description best matches this code fragment?
+# prints every second line
+
+
+# Consider this code:
+budget_file = open('budgie_budget.txt', 'w')
+budget_file.write('Seed: $10/month')
+budget_file.write('Cage: $50')
+budget_file.close()
+# What will the contents of budgie budget.txt look like after this code is run?
+# Seed: $10/monthCage: $50
+
+
+from typing import TextIO
+def is_correct(dictionary: TextIO, word: str) -> bool:
+    """Return True iff word is a correctly-spelled word in dictionary.
+
+    Note: due to a PCRS-specific constraint, the example calls below use Open
+    with a capital 'O'.  The actual function has a lowercase 'o'.
+
+    >>> dict1 = Open('dict.txt', 'r')
+    >>> is_correct(dict1, "Zyrtec")
+    True
+    >>> dict1.close()
+
+    >>> dict1 = Open('dict.txt', 'r')
+    >>> is_correct(dict1, "lolz")
+    False
+    >>> dict1.close()
+    """
+    for line in dictionary:
+        if line.strip() == word:
+            return True
+    return False
+
+
+"""
+Select all valid methods that can be called on an open file object in Python.
+file.read(size)
+file.writable()
+file.close()
+file.truncate()
+"""
+
+
+# Consider this code:
+# def num_same(s1: str, s2: str) -> list[int]:
+#     """Return a two-item list with the first item representing the number of characters
+#     that are the same at corresponding positions of s1 and s2, and the second item
+#     representing the number of characters that are different at those positions.
+#     >>> num_same('hello', 'jello')
+#     [4, 1]
+#     >>> num_same('him', 'this')
+#     [0, 3]
+#     """
+#     same_count = 0
+#     different_count = 0
+#     for i in range(len(s1)):
+#         if s1[i] == s2[i]:
+#             same_count = same_count + 1
+#         else:
+#             different_count = different_count + 1
+#     return [same_count, different_count]
+#
+# In which situation will the code above result in an error?
+# When s1 is longer than s2.

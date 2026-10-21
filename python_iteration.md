@@ -1867,3 +1867,13 @@ while count < 7:
 *     [['A', 1], ['B', 2], ['C', 3]]
 *     """
 *     pairs = []
+* 
+* 
+* 21/10/26
+* Factoring = breaking the complex problem into small sub problems
+* if a > 5:
+    * if b > 5:
+        * if c > 5:
+* is equivalent to
+* if a > 5 and b > 5 and c > 5:
+

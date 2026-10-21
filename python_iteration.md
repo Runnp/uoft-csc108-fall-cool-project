@@ -1876,4 +1876,3 @@ while count < 7:
         * if c > 5:
 * is equivalent to
 * if a > 5 and b > 5 and c > 5:
-

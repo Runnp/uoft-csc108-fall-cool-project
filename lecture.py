@@ -216,4 +216,22 @@ def split_names(filename: str) -> None:
                     first.write(names[0] + '\n')
                     second.write(names[1] + '\n')
 
+def check_free_shipping(order_total: float, membership_status: str, location: str) -> str:
+    if order_total > 50 and membership_status == 'premium' and location == 'domestic':
+        return 'Free shipping'
+    return 'No free shipping'
 
+def foo(x, y):
+    if x > 100 and y > 0:
+        if y > 100 or x > 100:
+            return "A"
+        return "B"
+    elif y <= 0 or x <= 0:
+        return "A"
+    else:
+        if y > 0:
+            return "A"
+        if y <= 0:
+            return "B"
+        else:
+            return "D"

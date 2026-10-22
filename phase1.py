@@ -25,35 +25,13 @@ outputs from functions above
 My diagram represents inputs, outputs, descriptions in more detail.
 Refer to decomp_image.png
 ---------------------------------------------------------
-Dataset: World_Bank_Data_Uzbekistan.csv
-Source: World Bank Open Data
-Link: https://data.worldbank.org/country/uzbekistan
-Note: The dataset comes in archive with three files:
-* Metadata_Country_API_UZB_DS2_en_csv_v2_385286.csv
-* API_UZB_DS2_en_csv_v2_385286.csv
-* Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv
-IMPORTANT: We have real data only in API_UZB_DS2_en_csv_v2_385286.csv
-that I renamed into World_Bank_Data_Uzbekistan.csv for clearness.
-
-From other two files, Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv
-includes explanations and meanings of every indicator codes inside our
-World_Bank_Data_Uzbekistan.csv.
-
-However, I put the needed indicators inside this program:
-IMPORTANT:
-NE.EXP.GNFS.CD - Exports of goods and services
-NE.IMP.GNFS.CD - Imports of goods and services
-BX.KLT.DINV.CD.WD - Foreign direct investment, net inflows
-Notice: These values are calculated in USD currency, not inflation-adjusted.
----------------------------------------------------------
 Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
 =======================Thank you=========================
 """
 
 import csv
 CSV_FILE = (
-    "/Users/runnp/PycharmProjects/uoft-csc108-fall-cool-project/"
-    "World_Bank_Data_Uzbekistan.csv"
+    "API_UZB_DS2_en_csv_v2_385286.csv"
 )
 INVESTMENT_CODE = "BX.KLT.DINV.CD.WD"
 EXPORT_CODE = "NE.EXP.GNFS.CD"
@@ -130,7 +108,7 @@ def calculate_export_value(years: list, export_values: list, start_year: int,
     return start_value, end_value, change_exports
 
 
-def calculate_import_value(years: list, export_values: list,
+def calculate_import_value(years: list, import_values: list,
                            start_year: int, end_year: int) -> tuple:
     """
     Returns starting, ending, and change in import values between two years.
@@ -138,8 +116,8 @@ def calculate_import_value(years: list, export_values: list,
     start_index = years.index(start_year)
     end_index = years.index(end_year)
 
-    start_value = export_values[start_index]
-    end_value = export_values[end_index]
+    start_value = import_values[start_index]
+    end_value = import_values[end_index]
 
     change_imports = end_value - start_value
     return start_value, end_value, change_imports

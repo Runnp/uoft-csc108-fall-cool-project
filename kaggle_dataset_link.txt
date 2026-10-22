@@ -1,14 +1,16 @@
-Dataset: World_Bank_Data_Uzbekistan.csv
+Dataset: API_UZB_DS2_en_csv_v2_385286.csv
 Source: World Bank Open Data
 Link: https://data.worldbank.org/country/uzbekistan
 Note: The dataset comes in archive with three files:
 * Metadata_Country_API_UZB_DS2_en_csv_v2_385286.csv
-* API_UZB_DS2_en_csv_v2_385286.csv - IMPORTANT: We are using this file ONLY
+----includes explanations of every indicator.
+* API_UZB_DS2_en_csv_v2_385286.csv
+----includes data
 * Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv
-IMPORTANT: We have real data only in API_UZB_DS2_en_csv_v2_385286.csv that I renamed into World_Bank_Data_Uzbekistan.csv
-From other two files, Metadata_Indicator_API_UZB_DS2_en_csv_v2_385286.csv includes explanations and meanings of every
-indicator codes inside our World_Bank_Data_Uzbekistan.csv. However, I put the needed indicators inside this program:
-IMPORTANT:
+----includes country name only
+IMPORTANT: For the purpose of this project, we are using only API_UZB_DS2_en_csv_v2_385286.csv
+The file is also illustrated as world_bank_dataset.csv in my diagram.
+As for indicators, IMPORTANT:
 NE.EXP.GNFS.CD - Exports of goods and services
 NE.IMP.GNFS.CD - Imports of goods and services
 BX.KLT.DINV.CD.WD - Foreign direct investment, net inflows

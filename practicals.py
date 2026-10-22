@@ -2,6 +2,7 @@
 #print(49/8)
 #print(270//3)
 #print(270%3)
+from secrets import token_hex
 
 #my_age = 17
 #my_friends_age = my_age + 14
@@ -420,3 +421,172 @@
 #     return l_index
 # print(where(s, ch))
 
+# 21/10/26
+# Practical
+# 1
+names = ['Bob', 'Hans', 'Zahara', 'Amitabha', 'Dov', 'Maria']
+print(names[4:1:-1])
+print(names[1:2])
+print(names[:3])
+
+#2
+# Given a list L and a value v, write an expression that removes the first occurrence of v from L.
+L = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
+v= 1
+L.remove(v)
+
+# 3
+# Write an expression that adds the string "What’s up?" to the front of the list ["Nothing much."]
+L1 = ["Nothing much."]
+L1.insert(0, "What's up?")
+
+# 4
+# Write code that turns [1, 3, 97, 0.1, -3.4, 86.95, -102] into [97, 86.95, 3, 1, 0.1, -3.4, -102].
+L2 = [1, 3, 97, 0.1, -3.4, 86.95, -102]
+L2.sort(reverse=True)
+
+# 5
+# Open a new file and in it write a function every_second that takes a list as a parameter and returns a new list that
+# contains every second element of the original list, starting at index 0.
+def every_second(L3: list) -> list:
+    result = []
+    for index in range(0, len(L), 2):
+        result.append(L3[index])
+    return result
+every_second([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+
+# 6
+# In the same file write a second function every_ith that takes a list L and an integer i as parameters and returns a list
+# consisting of every ith element of L, starting at index 0.
+def every_ith(L4: list, i: int) -> list:
+    result = []
+    for index in range(0, len(L4), i):
+        result.append(L[index])
+    return result
+every_ith([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 5)
+
+# 7
+# Now that you have every_ith available, write a third function every_second_revisited that has the same behaviour as
+# every_second but is only a single line of code.
+def every_second_revisited(L5: list) -> list:
+    return every_ith(L, 2)
+every_second_revisited([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+
+# 2
+# Print each element of list L on the same line.
+def print_list(L: list) -> None:
+    for item in L:
+        print(item, end=' ')
+    print()
+
+# Print the elements of list L that occur at odd indices.
+def print_list_odd(L: list) -> None:
+    for index in range(1, len(L), 2):
+        print(L[index])
+
+# Print the elements of list L that occur on even indices from the end
+# of the list to the front on the same or separate lines.
+def print_list_reverse_even(L: list) -> None:
+    for index in range(len(L) - 1, -1, -1):
+        if index % 2 == 0:
+            print(L[index])
+
+# Sum the elements of the list L of ints, starting from the back of list,
+# until the total is over 108 or the end of the list is reached, and return the
+# sum at that point (as an int).
+def sum_elements(L: list[int]) -> int:
+    total = 0
+    index = len(L) - 1
+    while index >= 0 and total <= 108:
+        total += L[index]
+        index -= 1
+    return total
+
+# Return True iff list L contains at least three adjacent elements with the same value. For
+# example, duplicates([1,1,1,2]) returns True and duplicates([1,2,1,1]) returns False
+def duplicates(L: list) -> bool:
+    for index in range(len(L) - 2):
+        if L[index] == L[index + 1] and L[index + 2]:
+            return True
+    return False
+
+# 4
+pets = [["Shoji", "cat", 18], ["Hanako", "dog", 15], ["Sir Toby", "cat", 10],
+["Sachiko", "cat", 7], ["Sasha", "dog", 3], ["Lopez", "dog", 13]]
+
+# 1
+# Write a for-loop that prints each list from list pets two lines apart (Only use one print statement).
+for pet in pets:
+    print(pet, end='\n\n')
+
+# 2
+# Write a for-loop that prints the first element of each inner list in list pets on a separate line.
+for pet in pets:
+    print(pet[0])
+
+# 3
+# Write a for-loop that computes the number of cats in pets.
+cats = 0
+for pet in pets:
+    if pet[1] == 'cat':
+        cats += 1
+print(cats)
+
+# 4
+# Write a for-loop that computes the average of the ages of the animals in pets. Ages are the third element of the inner lists.
+total = 0
+for pet in pets:
+    total += pet[2]
+average = total / len(pets)
+print(average)
+
+# 5
+# Write a function nested_lengths that takes a list L as a parameter and returns a list of the lengths of the sublists.
+def nested_lengths(L: list) -> list:
+    result = []
+    for item in L:
+        if isinstance(item, list):
+            result.append(len(item))
+        else:
+            result.append(0)
+    return result
+print(nested_lengths([[1, 2], ['a', 'b', 'c']]))
+print(nested_lengths([[1], 5, [], 'testing']))
+
+# What is one thing you learned this week that sparked
+# your curiosity? Why are you grateful for this learning experience?
+# I would suppose that nailing squueze theorem this week was the most inspiring thing to work on.
+# All those various functions of sin like sin(xx)/x can be illustrated and bounded with just 1/x.
+# That was very beautiful mathematics considering the pase of MAT137 with weekly tests. I am grateful
+# because it clicked very well and I wrote many proofs in just few minutes after introduction of the
+# topic. Also, today I proved differentiation without quotient rule by limit definition. It was quite
+# fresh because in AP calc BC it was not even thinkable. Lastly, computed lim h -> 0 f(a-h)-f(a)/-h
+# to use it in my proof which I never previously calculated, instead used the +h version.
+
+# 7
+# >>> rotate([
+# [1, 2, 3],
+# [4, 5, 6],
+# [7, 8, 9]
+# ])
+# return
+# [
+# [7, 4, 1],
+# [8, 5, 2],
+# [9, 6, 3]
+# ]
+def rotate(L5: list) -> list:
+    L6 = []
+    for column in range(len(L5[0])):
+        row = []
+        for index in range(len(L5) - 1, -1, -1):
+            row.append(L5[index][column])
+        L6.append(row)
+    return L6
+L5 = [
+    [0, 1, 0],
+    [20, 0, 5],
+    [0, 10, 0]
+]
+result = rotate(L5)
+print(*result, sep="\n")

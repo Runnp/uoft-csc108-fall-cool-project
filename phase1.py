@@ -47,7 +47,7 @@ BX.KLT.DINV.CD.WD - Foreign direct investment, net inflows
 Notice: These values are calculated in USD currency, not inflation-adjusted.
 ---------------------------------------------------------
 Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
-=======================Thanks you========================
+=======================Thank you=========================
 """
 
 import csv

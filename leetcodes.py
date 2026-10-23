@@ -42,3 +42,13 @@ class Solution:
 # end = 4
 # s = s[:start] + ''.join(sorted(s[start:end])) + s[end:]
 # print(s)
+
+class Solution:
+    def sortPermutation(self, nums: List[int]) -> int:
+        m = -1
+        for i, x in enumerate(nums):
+            if x != i:
+                m &= x
+                if not m:
+                    return 0
+        return max(m, 0)

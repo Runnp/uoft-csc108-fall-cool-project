@@ -1,6 +1,4 @@
-Disclaimer: No AI was used in writing, designing, and programing this project.
-The progress can be seen in my GitHub repository for this course, if necessary.
-https://github.com/runnp/uoft-csc108-fall-cool-project.git
-The diagram I myself drew on Miro,
-The code I myself wrote in PyCharm, and
-The video I myself recorded using native Apple software.
+Disclaimer:
+ChatGPT was used in finding dataset, debugging, and testing the program.
+I tried to code by myself and did all the designing, planning, and
+presenting of the project.

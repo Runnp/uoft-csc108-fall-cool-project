@@ -1,4 +1,7 @@
-""""
+"""" Disclaimer:
+ChatGPT was used in finding dataset, debugging, and testing the program.
+I tried to code by myself and did all the designing, planning, and
+presenting of the project.
 =======================phase1.py========================
 Assalomu Aleykum!
 Inspiration: ECO101 Principles of Microeconomics.
@@ -25,7 +28,7 @@ outputs from functions above
 My diagram represents inputs, outputs, descriptions in more detail.
 Refer to decomp_image.png
 ---------------------------------------------------------
-Programmed by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
+   Made by Nurmuhammad Mirzaahmadov for CSC108 Phase 1
 =======================Thank you=========================
 """
 

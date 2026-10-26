@@ -92,3 +92,5 @@ class Solution:
                             island.append((a, b))
                 ans += total % k == 0
         return ans
+
+

@@ -160,3 +160,11 @@ class Solution:
 # The cost of a path is defined as the bitwise XOR of all the values in the cells along that path, including the start and end cells.
 #
 # Return the minimum possible XOR value among all valid paths from (0, 0) to (m - 1, n - 1).
+
+class Solution:
+    def minCost(self, grid: list[list[int]]) -> int:
+        dp = [{0}] + [set() for _ in range(len(grid[0]) - 1)]
+        for row in grid:
+            for j, v in enumerate(row):
+                dp[j] = {x ^ v for x in dp[j] | (dp[j - 1] if j else set())}
+        return min(dp[-1])

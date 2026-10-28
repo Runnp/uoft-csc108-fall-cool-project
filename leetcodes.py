@@ -136,3 +136,17 @@ class Solution:
         return arr
 
 # Given a valid parentheses string s, return the nesting depth of s. The nesting depth is the maximum number of nested parentheses.
+class Solution:
+    def maxDepth(self, s):
+        depth = 0
+        r = 0
+        for c in s:
+            if c == ')':
+                depth -= 1
+                continue
+            if c != '(':
+                continue
+            depth += 1
+            if depth > r:
+                r = depth
+        return r

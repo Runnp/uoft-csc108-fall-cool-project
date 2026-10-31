@@ -285,3 +285,31 @@ class Solution:
 # Since the answer may be very large, return it modulo 109 + 7.
 #
 # Note: If a reflection moves the robot into a mirror cell, the robot is immediately reflected again based on the direction it used to enter that mirror: if it entered while moving right, it will be turned down; if it entered while moving down, it will be turned right. This process will continue until either the last cell is reached, the robot moves out of bounds or the robot moves to a non-mirror cell.
+
+class Solution:
+    def uniquePaths(self, grid: List[List[int]]) -> int:
+        MOD = 10**9 + 7
+        m, n = len(grid), len(grid[0])
+
+        # f[i][j][0]: enter (i, j) by moving down
+        # f[i][j][1]: enter (i, j) by moving right
+        f = [[[0, 0] for _ in range(n)] for _ in range(m)]
+        f[0][0][0] = 1
+
+        for i in range(m):
+            for j in range(n):
+                if i > 0:
+                    if grid[i - 1][j] == 0:
+                        f[i][j][0] = f[i - 1][j][0] + f[i - 1][j][1]
+                    else:
+                        f[i][j][0] = f[i - 1][j][1]
+                    f[i][j][0] %= MOD
+
+                if j > 0:
+                    if grid[i][j - 1] == 0:
+                        f[i][j][1] = f[i][j - 1][0] + f[i][j - 1][1]
+                    else:
+                        f[i][j][1] = f[i][j - 1][0]
+                    f[i][j][1] %= MOD
+
+        return (f[m - 1][n - 1][0] + f[m - 1][n - 1][1]) % MOD

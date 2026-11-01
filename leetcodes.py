@@ -331,3 +331,8 @@ class Solution:
                     curRow[idx], prvCel = prvCel, p
 
         return curRow[-1] % 1_000_000_007
+
+
+# Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+#
+# In one move, you can increment n - 1 elements of the array by 1.

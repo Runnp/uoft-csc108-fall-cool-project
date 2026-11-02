@@ -235,3 +235,18 @@ def foo(x, y):
             return "B"
         else:
             return "D"
+
+def char_index(s: str) -> dict[str, list[int]]:
+    dictionary = {}
+
+    for i, char in enumerate(s):
+        if char not in dictionary:
+            dictionary[char] = []
+
+        dictionary[char].append(i)
+
+    return dictionary
+
+print(char_index("nnMMRRiiZZhhAAAvvOO"))
+
+

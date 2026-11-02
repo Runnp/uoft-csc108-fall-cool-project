@@ -346,3 +346,15 @@ class Solution:
 # In one move, you can increment or decrement an element of the array by 1.
 #
 # Test cases are designed so that the answer will fit in a 32-bit integer.
+class Solution:
+    def minMoves2(self, nums: List[int]) -> int:
+        l = len(nums)
+        if l == 1:
+            return 0
+        nums.sort()
+        mid = nums[l // 2]
+        res = 0
+        for i in nums:
+            res += abs(i - mid)
+        return res
+

@@ -249,4 +249,26 @@ def char_index(s: str) -> dict[str, list[int]]:
 
 print(char_index("nnMMRRiiZZhhAAAvvOO"))
 
+# Which of these can be a key? (for dictionaries)
+# a) string - True
+# b) int - True
+# c) list
+# d) tuple - True
+# need to be immutable
+# a = {1: 'a', 1: 'a', 1: 'a'}
+# will not return an Error
+# a returns {1: 'a'}
+# Since int are immutable, Python recognizes that all these are the same and return that
+# t = (5)
+# type(t) is <class 'int'>
+# t = (5,)
+# type(t) is <class 'tuple'>
 
+book_series = {'Animorphs': {'author': 'K.A. Applegate', 'number': 54, 'genre':
+'middle grade'},
+'Inheritance Games': {'author': 'Jennifer Lynn Barnes', 'number': 2,
+'genre': 'adult'},
+'Shopaholic': {'author': 'Sophie Kinsella', 'number': 10, 'genre':
+'adult'}}
+
+def find_books(book_series: dict[str, dict], genre: str) -> list[str]:

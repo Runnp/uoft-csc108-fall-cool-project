@@ -278,3 +278,12 @@ def find_books(book_series: dict[str, dict], genre: str) -> list[str]:
             series_list.append(series)
     return series_list
 
+def in_trie(word: str, trie: dict[str, dict]) -> bool:
+"""
+Return True iff <word> is found in <trie>.
+>>> trie = build_trie(["that", "these", "those"])
+>>> in_trie('that', trie)
+True
+>>> in_trie('paul', trie)
+False
+"""

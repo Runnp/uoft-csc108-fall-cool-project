@@ -403,3 +403,34 @@ class Solution:
                 sum_l += num
             else:
                 heappush(right, num)
+                right_size += 1
+                sum_r += num
+            balance()
+            if i >= x:
+                num = nums[i - x]
+                delayed[num] += 1
+                if num <= -left[0]:
+                    left_size -= 1
+                    sum_l -= num
+                    if num == -left[0]:
+                        prune(left, -1)
+                else:
+                    right_size -= 1
+                    sum_r -= num
+                    if num == right[0]:
+                        prune(right, 1)
+                balance()
+            if i >= x - 1:
+                mid = -left[0]
+                ops[i] = sum_r - sum_l + mid * (left_size - right_size)
+
+        dp = [[0] + [inf] * k for _ in range(n)]
+        for j in range(1, k + 1):
+            if j == 1:
+                dp[x - 1][j] = ops[x - 1]
+            else:
+                dp[j * x - 1][j] = dp[(j - 1) * x - 1][j - 1] + ops[j * x - 1]
+        for j in range(1, k + 1):
+            for i in range(j * x, n):
+                dp[i][j] = min(dp[i - x][j - 1] + ops[i], dp[i - 1][j])
+        return dp[n - 1][k]

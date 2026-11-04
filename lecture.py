@@ -173,81 +173,81 @@
 #
 #     return answer
 # print(highest_rated_musician(csv))
-
-def freq(in_filename:str, out_filename:str) -> None:
-    """
-    Write the count of each digit found in in_filename to out_filename
-
-    Precondition: each line contains exactly one digit
-    :param in_filename:
-    :param out_filename:
-    :return:
-    """
-    with open(in_filename,'r') as infile:
-        counts = [0] * 10
-        for line in infile:
-            digit = int(line)
-            counts[digit] += 1
-
-    with open(out_filename,'w') as outifle:
-        for digit in range(10):
-            outifle.write(str(counts[digit]))
-
-if __name__ == '__main__':
-    in_filename = 'digits.txt'
-    out_filename = 'frequency.txt'
-
-
-def split_names(filename: str) -> None:
-    """
-    Write first names into first.txt
-    Write last names into last.txt
-    Precondition: each line contains at least one first and one last name
-
-    :param filename:
-    :return:
-    """
-    with open(filename, 'r') as source:
-        with open('first.txt', 'w') as first:
-            with open('second.txt', 'w') as second:
-                for line in source:
-                    names = line.split()
-
-                    first.write(names[0] + '\n')
-                    second.write(names[1] + '\n')
-
-def check_free_shipping(order_total: float, membership_status: str, location: str) -> str:
-    if order_total > 50 and membership_status == 'premium' and location == 'domestic':
-        return 'Free shipping'
-    return 'No free shipping'
-
-def foo(x, y):
-    if x > 100 and y > 0:
-        if y > 100 or x > 100:
-            return "A"
-        return "B"
-    elif y <= 0 or x <= 0:
-        return "A"
-    else:
-        if y > 0:
-            return "A"
-        if y <= 0:
-            return "B"
-        else:
-            return "D"
-
-def char_index(s: str) -> dict[str, list[int]]:
-    dictionary = {}
-
-    for i, char in enumerate(s):
-        if char not in dictionary:
-            dictionary[char] = []
-
-        dictionary[char].append(i)
-
-    return dictionary
-
-print(char_index("nnMMRRiiZZhhAAAvvOO"))
+#
+# def freq(in_filename:str, out_filename:str) -> None:
+#     """
+#     Write the count of each digit found in in_filename to out_filename
+#
+#     Precondition: each line contains exactly one digit
+#     :param in_filename:
+#     :param out_filename:
+#     :return:
+#     """
+#     with open(in_filename,'r') as infile:
+#         counts = [0] * 10
+#         for line in infile:
+#             digit = int(line)
+#             counts[digit] += 1
+#
+#     with open(out_filename,'w') as outifle:
+#         for digit in range(10):
+#             outifle.write(str(counts[digit]))
+#
+# if __name__ == '__main__':
+#     in_filename = 'digits.txt'
+#     out_filename = 'frequency.txt'
+#
+#
+# def split_names(filename: str) -> None:
+#     """
+#     Write first names into first.txt
+#     Write last names into last.txt
+#     Precondition: each line contains at least one first and one last name
+#
+#     :param filename:
+#     :return:
+#     """
+#     with open(filename, 'r') as source:
+#         with open('first.txt', 'w') as first:
+#             with open('second.txt', 'w') as second:
+#                 for line in source:
+#                     names = line.split()
+#
+#                     first.write(names[0] + '\n')
+#                     second.write(names[1] + '\n')
+#
+# def check_free_shipping(order_total: float, membership_status: str, location: str) -> str:
+#     if order_total > 50 and membership_status == 'premium' and location == 'domestic':
+#         return 'Free shipping'
+#     return 'No free shipping'
+#
+# def foo(x, y):
+#     if x > 100 and y > 0:
+#         if y > 100 or x > 100:
+#             return "A"
+#         return "B"
+#     elif y <= 0 or x <= 0:
+#         return "A"
+#     else:
+#         if y > 0:
+#             return "A"
+#         if y <= 0:
+#             return "B"
+#         else:
+#             return "D"
+#
+# def char_index(s: str) -> dict[str, list[int]]:
+#     dictionary = {}
+#
+#     for i, char in enumerate(s):
+#         if char not in dictionary:
+#             dictionary[char] = []
+#
+#         dictionary[char].append(i)
+#
+#     return dictionary
+#
+# print(char_index("nnMMRRiiZZhhAAAvvOO"))
 
 # Which of these can be a key? (for dictionaries)
 # a) string - True
@@ -272,3 +272,9 @@ book_series = {'Animorphs': {'author': 'K.A. Applegate', 'number': 54, 'genre':
 'adult'}}
 
 def find_books(book_series: dict[str, dict], genre: str) -> list[str]:
+    series_list = []
+    for series in book_series:
+        if book_series[series]['genre'] == genre:
+            series_list.append(series)
+    return series_list
+

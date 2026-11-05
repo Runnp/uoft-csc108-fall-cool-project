@@ -327,3 +327,13 @@ def make_dictionary(filename: str) -> dict[str, list[str]]:
     return word_d
 
 print(make_dictionary('alice.txt'))
+
+# *
+# * 9/11/26
+# * Lecture
+# * def trie
+# * Random Text Generator
+# * capitalization matters
+# * punctuation stays attached
+# * key: a word
+# * value: the list of every word that came after it

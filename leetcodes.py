@@ -465,3 +465,13 @@ class Solution:
                 if server and rows[i] + cols[j] > 2:
                     ans += 1
         return ans
+
+# Input: servers = [3,3,2], tasks = [1,2,3,2,1,2]
+# Output: [2,2,0,2,1,2]
+# Explanation: Events in chronological order go as follows:
+# - At second 0, task 0 is added and processed using server 2 until second 1.
+# - At second 1, server 2 becomes free. Task 1 is added and processed using server 2 until second 3.
+# - At second 2, task 2 is added and processed using server 0 until second 5.
+# - At second 3, server 2 becomes free. Task 3 is added and processed using server 2 until second 5.
+# - At second 4, task 4 is added and processed using server 1 until second 5.
+# - At second 5, all servers become free. Task 5 is added and processed using server 2 until second 7.

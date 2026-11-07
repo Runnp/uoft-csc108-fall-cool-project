@@ -308,3 +308,22 @@ def in_trie(word: str, trie: dict[str, dict]) -> bool:
             return False
         curr_dict = curr_dict[ch]
     return True
+
+def make_dictionary(filename: str) -> dict[str, list[str]]:
+    """
+    Return a dictionary where the keys are words in <filename> and the value
+    for a key is the list of words that were found to follow the key.
+    """
+    with open (filename) as f:
+        words = f.read().split()
+
+    word_d = {}
+    prev_word = ''
+    for word in words:
+        if prev_word not in word_d:
+            word_d[prev_word] = []
+        word_d[prev_word].append(word)
+        prev_word = word
+    return word_d
+
+print(make_dictionary('alice.txt'))

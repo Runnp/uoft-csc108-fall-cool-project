@@ -475,3 +475,31 @@ class Solution:
 # - At second 3, server 2 becomes free. Task 3 is added and processed using server 2 until second 5.
 # - At second 4, task 4 is added and processed using server 1 until second 5.
 # - At second 5, all servers become free. Task 5 is added and processed using server 2 until second 7.
+
+class Solution:
+    def assignTasks(self, servers: List[int], tasks: List[int]) -> List[int]:
+
+        n, ans, busy_servers = len(servers), [], []
+        free_servers = list(zip(servers, range(n)))
+        heapify(free_servers)
+
+        for time, task in enumerate(tasks):
+
+            while busy_servers:
+                sec, wgt, idx = busy_servers[0]
+                if sec != time: break
+
+                heappush(free_servers, (wgt, idx))
+                heappop(busy_servers)
+
+            if free_servers == []:
+                sec, wgt, idx = heappop(busy_servers)
+                heappush(busy_servers, (sec + task, wgt, idx))
+
+            else:
+                wgt, idx = heappop(free_servers)
+                heappush(busy_servers, (time + task, wgt, idx))
+
+            ans.append(idx)
+
+        return ans

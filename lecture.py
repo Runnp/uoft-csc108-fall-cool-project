@@ -285,19 +285,26 @@ def find_books(book_series: dict[str, dict], genre: str) -> list[str]:
 # * 20 Pages, Questions 14 Pages
 # * LearnAid
 # * MockTest
-*
-* 6/11/26
-* Lecture
-* Thursday November 12
-* File IO
-* 20 Pages, Questions 14 Pages
-* LearnAid
-* MockTest
-* Poll:
-* B
-* C
-* D
-* B
-* B
-* D
+# *
+# * 6/11/26
+# * Lecture
+# * Thursday November 12
+# * File IO
+# * 20 Pages, Questions 14 Pages
+# * LearnAid
+# * MockTest
+# * Poll:
+# * B
+# * C
+# * D
+# * B
+# * B
+# * D
 
+def in_trie(word: str, trie: dict[str, dict]) -> bool:
+    curr_dict = trie
+    for ch in word:
+        if ch not in curr_dict:
+            return False
+        curr_dict = curr_dict[ch]
+    return True

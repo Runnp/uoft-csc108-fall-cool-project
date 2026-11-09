@@ -285,3 +285,18 @@ def find_books(book_series: dict[str, dict], genre: str) -> list[str]:
 # * 20 Pages, Questions 14 Pages
 # * LearnAid
 # * MockTest
+*
+* 6/11/26
+* Lecture
+* Thursday November 12
+* File IO
+* 20 Pages, Questions 14 Pages
+* LearnAid
+* MockTest
+* Poll:
+* B
+* C
+* D
+* B
+* B
+* D

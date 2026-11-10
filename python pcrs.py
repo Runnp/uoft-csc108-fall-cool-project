@@ -292,3 +292,32 @@ def is_one_to_one(d: dict[str, int]) -> bool:
 # Use a list accumulator to keep track of the values we've seen so far.
 # For each key in d, if the value associated with that key has already been seen, return False. Otherwise, append it to the list of values that we've seen so far.
 # Once all the keys have been processed, return True because we didn't see a duplicate value.
+
+
+words = ["bat","tab","cat"]
+def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
+
+    result = []
+    for i in range(len(words)):
+        for j in range(len(words)):
+            if i != j:
+                combined = words[i] + words[j]
+
+                if combined == combined[::-1]:
+                    result.append((i, j))
+
+    return result
+
+#     Return all pairs of indices (i, j) from words where concatenating
+#     words[i] and words[j] (in that order) produces a palindrome.
+#
+#     For example, "bat" and "tab" form a palindrome pair because
+#     "battab" is a palindrome. The pair (i, j) means words[i] + words[j]
+#     is the palindrome. The order matters, so (i, j) and (j, i) are usually
+#     two different results.
+#
+#     Preconditions: len(words) >= 2
+#
+#     Example:
+#     >>> palindrome_pairs(['abcd', 'dcba'])
+#     [(0, 1), (1, 0)]

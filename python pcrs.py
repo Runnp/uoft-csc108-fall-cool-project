@@ -268,3 +268,27 @@ context_to_next_words = {
     ('the', 'ship,'): ['and'],
     ('ship,', 'and'): ['the']
 }
+
+def is_one_to_one(d: dict[str, int]) -> bool:
+    """Return True if and only if no two of d's keys map to the same value.
+
+    >>> is_one_to_one({'a': 1, 'b': 2, 'c': 3})
+    True
+    >>> is_one_to_one({'a': 1, 'b': 2, 'c': 1})
+    False
+    >>> is_one_to_one({})
+    True
+    """
+
+    seen = []  # The values that have been seen so far.
+    for k in d:
+        if d[k] in seen:
+            return False
+        else:
+            seen.append(d[k])
+
+    return True
+
+# Use a list accumulator to keep track of the values we've seen so far.
+# For each key in d, if the value associated with that key has already been seen, return False. Otherwise, append it to the list of values that we've seen so far.
+# Once all the keys have been processed, return True because we didn't see a duplicate value.

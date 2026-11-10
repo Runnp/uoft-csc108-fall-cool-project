@@ -256,3 +256,15 @@ file.truncate()
 #
 #
 # answer = 5
+
+['And', 'the', 'fan,', 'and', 'the', 'cup,', 'And', 'the', 'ship,', 'and', 'the', 'fish.']
+context_to_next_words = {
+    ('And', 'the'): ['fan,', 'ship,'],
+    ('the', 'fan,'): ['and'],
+    ('fan,', 'and'): ['the'],
+    ('and', 'the'): ['cup,', 'fish.'],
+    ('the', 'cup,'): ['And'],
+    ('cup,', 'And'): ['the'],
+    ('the', 'ship,'): ['and'],
+    ('ship,', 'and'): ['the']
+}

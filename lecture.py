@@ -337,3 +337,42 @@ print(make_dictionary('alice.txt'))
 # * punctuation stays attached
 # * key: a word
 # * value: the list of every word that came after it
+
+# animal_to_locomotion = {'fish' : ['swim'],
+#                         'kangaroo' : ['hop'],
+#                         'frog' : ['swim', 'hop']}
+# animal_to_locomotion['human'] = ['swim', 'run', 'walk', 'airplane']
+#
+# Will an error occur when the code is executed?
+# yes
+# no
+# no is the right answer
+
+
+# animal_to_locomotion = {'fish' : ['swim'],
+#                         'kangaroo' : ['hop'],
+#                         'frog' : ['swim', 'hop']}
+# animal_to_locomotion['kangaroo'].append('airplane')
+# Will the number of key/value pairs in the dictionary increase?
+# yes
+# no
+
+def express_checkout(product_to_quantity: dict[str, int]) -> bool:
+    """Return True iff the grocery order in product_to_quantity qualifies for
+    the express checkout.  product_to_quantity maps products to the numbers of
+    those items in the grocery order.
+
+    >>> express_checkout({'banana': 3, 'soy milk': 1, 'peanut butter': 1})
+        True
+    >>> express_checkout({'banana': 3, 'soy milk': 1, 'twinkie': 5})
+        True
+    """
+    total = 0
+
+    for product in product_to_quantity:
+        total += product_to_quantity[product]
+
+    if total <= 9:
+        return True
+    else:
+        return False

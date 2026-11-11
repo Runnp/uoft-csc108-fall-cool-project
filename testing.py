@@ -75,91 +75,124 @@
 #         x = x + 1
 #     x = x + 1
 # print(x)
+#
+# name_to_binomial = {'human': 'Homo sapiens',
+#                     'dog': 'Canis familiaris',
+#                     'narwhal': 'Monodon monoceros'}
+#
+# print('dog' in name_to_binomial)
+# # print('Canis familiaris' in name_to_binomial)
+# # print(name_to_binomial[0] == 'human')
+# print(len(name_to_binomial) == 3)
+# print(name_to_binomial == {'dog': 'Canis familiaris', 'narwhal': 'Monodon monoceros', 'human': 'Homo sapiens'})
+#
+#
+# def build_placements(shoes: list[str]) -> dict[str, list[int]]:
+#     """Return a dictionary where each key is a shoe company from shoes and each
+#     value is a list of placements by people wearing footwear made by that
+#     company. First place is at index 0 of shoes, 2nd place is at index 1, and
+#     so on.
+#
+#     >>> build_placements(['Saucony', 'Asics', 'Asics', 'NB', 'Saucony', \
+#                           'Nike', 'Asics', 'Adidas', 'Saucony', 'Asics'])
+#     {'Saucony': [1, 5, 9] 'Asics': [2, 3, 7, 10], 'NB': [4], 'Nike': [6], 'Adidas': [8]}
+#     """
+#
+#     rank = {}
+#     track = 1
+#
+#     for brand in shoes:
+#         if brand not in rank:
+#             rank[brand] = []
+#         rank[brand].append(track)
+#         track += 1
+#
+#     return rank
+#
+#
+# def isAnagram(s1: str, s2: str) -> bool:
+#     """Return True if s2 is an anagram of s1, False otherwise.
+#     Two strings are anagrams of each other if they contain the same
+#     count of all characters. Case sensitive and space sensitive.
+#     """
+#     return sorted(s1) == sorted(s2)
+#
+#
+# def tuple_max(l: list[tuple[int, int]]) -> int:
+#     """Return the index of the largest tuple in l.
+#     The max is determined by the 2nd int in each tuple.
+#     Return -1 if l is empty.
+#     If multiple tuples have the same 2nd int, return the first.
+#
+#     >>> tuple_max([(1, 0), (2, 0), (-4, 1)])
+#     2
+#     """
+#     if len(l) == 0:
+#         return -1
+#
+#
+#     max_index = 0
+#     for i in range(len(l)):
+#         if l[i][1] > l[max_index][1]:
+#             max_index = i
+#
+#     return max_index
+#
+# # 9: 'steak',
+# # 9: 'cake'
+# # Python dictionaries cannot contain duplicate keys. The later value replaces the earlier one.
+#
+# # Dictionaries do not support .append()!
+# # .append() is a method for lists.
+#
+# def reverse_lookup_dictionary(phone_num: str,
+#                               phone_to_name: dict[str, str]) -> str:
+#     """This function receives a phone number phone_num, and a dictionary
+#     phone_to_name in which each key is a phone number and each value
+#     is the name associated with that phone number.
+#
+#     Return the name associated with phone_num in phone_to_name, or
+#     an empty string if there is no match.
+#
+#     >>> reverse_lookup_dictionary("416-555-3498", {"416-555-3498": \
+#         "John A. Macdonald", "647-555-9812": "Louis Riel", "416-555-6543": \
+#         "Canoe Head", "905-555-6681":"Tim Horton"})
+#     'John A. Macdonald'
+#     """
+#     if phone_num in phone_to_name:
+#         return phone_to_name[phone_num]
+#
+#     return ''
 
-name_to_binomial = {'human': 'Homo sapiens',
-                    'dog': 'Canis familiaris',
-                    'narwhal': 'Monodon monoceros'}
+# values = [2, 5, 8]
+# saved = values
+# values[1] = 10
+# print(saved)
 
-print('dog' in name_to_binomial)
-# print('Canis familiaris' in name_to_binomial)
-# print(name_to_binomial[0] == 'human')
-print(len(name_to_binomial) == 3)
-print(name_to_binomial == {'dog': 'Canis familiaris', 'narwhal': 'Monodon monoceros', 'human': 'Homo sapiens'})
+# for i in range(2):
+#     for j in range(3):
+#         if j > i:
+#             continue
+#         print("GO")
+#
+# for i in range(2):
+#     print (i)
 
+def count_matches(values):
+    count = 0
+    for i, value in enumerate(values):
+        if value > i:
+            count += 1
+    return count
 
-def build_placements(shoes: list[str]) -> dict[str, list[int]]:
-    """Return a dictionary where each key is a shoe company from shoes and each
-    value is a list of placements by people wearing footwear made by that
-    company. First place is at index 0 of shoes, 2nd place is at index 1, and
-    so on.
+# print(count_matches([0, 3, 1, 5]))
 
-    >>> build_placements(['Saucony', 'Asics', 'Asics', 'NB', 'Saucony', \
-                          'Nike', 'Asics', 'Adidas', 'Saucony', 'Asics'])
-    {'Saucony': [1, 5, 9] 'Asics': [2, 3, 7, 10], 'NB': [4], 'Nike': [6], 'Adidas': [8]}
-    """
-
-    rank = {}
-    track = 1
-
-    for brand in shoes:
-        if brand not in rank:
-            rank[brand] = []
-        rank[brand].append(track)
-        track += 1
-
-    return rank
+inventory = {}
+inventory["apples"] = 12
+inventory["bananas"] = 8
+inventory["apples"] = 15
+inventory.pop("bananas")
+# print(inventory)
 
 
-def isAnagram(s1: str, s2: str) -> bool:
-    """Return True if s2 is an anagram of s1, False otherwise.
-    Two strings are anagrams of each other if they contain the same
-    count of all characters. Case sensitive and space sensitive.
-    """
-    return sorted(s1) == sorted(s2)
-
-
-def tuple_max(l: list[tuple[int, int]]) -> int:
-    """Return the index of the largest tuple in l.
-    The max is determined by the 2nd int in each tuple.
-    Return -1 if l is empty.
-    If multiple tuples have the same 2nd int, return the first.
-
-    >>> tuple_max([(1, 0), (2, 0), (-4, 1)])
-    2
-    """
-    if len(l) == 0:
-        return -1
-
-
-    max_index = 0
-    for i in range(len(l)):
-        if l[i][1] > l[max_index][1]:
-            max_index = i
-
-    return max_index
-
-# 9: 'steak',
-# 9: 'cake'
-# Python dictionaries cannot contain duplicate keys. The later value replaces the earlier one.
-
-# Dictionaries do not support .append()!
-# .append() is a method for lists.
-
-def reverse_lookup_dictionary(phone_num: str,
-                              phone_to_name: dict[str, str]) -> str:
-    """This function receives a phone number phone_num, and a dictionary
-    phone_to_name in which each key is a phone number and each value
-    is the name associated with that phone number.
-
-    Return the name associated with phone_num in phone_to_name, or
-    an empty string if there is no match.
-
-    >>> reverse_lookup_dictionary("416-555-3498", {"416-555-3498": \
-        "John A. Macdonald", "647-555-9812": "Louis Riel", "416-555-6543": \
-        "Canoe Head", "905-555-6681":"Tim Horton"})
-    'John A. Macdonald'
-    """
-    if phone_num in phone_to_name:
-        return phone_to_name[phone_num]
-
-    return ''
+scores = {"Aisha": 90, "Ben": 0, "Carlos": 85}

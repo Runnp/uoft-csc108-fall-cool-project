@@ -196,3 +196,22 @@ inventory.pop("bananas")
 
 
 scores = {"Aisha": 90, "Ben": 0, "Carlos": 85}
+scores.clear()
+# print(scores)
+
+#
+# stops = [("West", 8), ("East", 6)]
+# for gate, platform in stops:
+#     print(gate, platform)
+
+# print(2 in [2, 5])
+
+def count_pairs(x, y):
+    count = 0
+    for i in range(1, x + 1):
+        for j in range(1, y + 1):
+            if x % i == 0 and j % 2 == 0:
+                count += 1
+    return count
+
+print(count_pairs(6, 5))

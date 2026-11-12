@@ -405,3 +405,29 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 # (MyInt, int, int) -> bool
 # (MyInt, MyInt, MyInt) -> bool
 # (int, int, int) -> bool - True
+
+# Consider this doctest code from function remove in vowels.py:
+#
+#     >>> remove('Harlem Shake')
+#     'Hrlm Shk'
+#
+#
+# Select the method(s) that are the unittest equivalent of the doctest above.
+#
+#
+#
+# def test_remove(self):
+#     act = vowels.remove('Harlem Shake')
+#     exp = 'Hrlm Shk'
+#     self.assertEqual(act, exp) - True
+#
+# def test_remove(self):
+#     self.assertEqual(vowels.remove('Harlem Shake'), 'Hrlm Shk') - True
+
+# For count_lowercase_vowels_v2, the test cases pass for all chosen values of s ("", "a", "b", "pfffft", "bandit", "aeioua"), except one. When s refers to "aeioua", the actual value is 5, not 6 as expected. Select the possible explanation(s) for this failure.
+#
+#
+# Consonants are being counted.
+# No e's are being counted. - True
+# Each vowel is only counted once, regardless of the number of occurrences of it. - True
+# The first a is not being counted.

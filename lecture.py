@@ -326,7 +326,7 @@ def make_dictionary(filename: str) -> dict[str, list[str]]:
         prev_word = word
     return word_d
 
-print(make_dictionary('alice.txt'))
+# print(make_dictionary('alice.txt'))
 
 # *
 # * 9/11/26
@@ -357,25 +357,25 @@ print(make_dictionary('alice.txt'))
 # yes
 # no
 
-def express_checkout(product_to_quantity: dict[str, int]) -> bool:
-    """Return True iff the grocery order in product_to_quantity qualifies for
-    the express checkout.  product_to_quantity maps products to the numbers of
-    those items in the grocery order.
-
-    >>> express_checkout({'banana': 3, 'soy milk': 1, 'peanut butter': 1})
-        True
-    >>> express_checkout({'banana': 3, 'soy milk': 1, 'twinkie': 5})
-        True
-    """
-    total = 0
-
-    for product in product_to_quantity:
-        total += product_to_quantity[product]
-
-    if total <= 9:
-        return True
-    else:
-        return False
+# def express_checkout(product_to_quantity: dict[str, int]) -> bool:
+#     """Return True iff the grocery order in product_to_quantity qualifies for
+#     the express checkout.  product_to_quantity maps products to the numbers of
+#     those items in the grocery order.
+#
+#     >>> express_checkout({'banana': 3, 'soy milk': 1, 'peanut butter': 1})
+#         True
+#     >>> express_checkout({'banana': 3, 'soy milk': 1, 'twinkie': 5})
+#         True
+#     """
+#     total = 0
+#
+#     for product in product_to_quantity:
+#         total += product_to_quantity[product]
+#
+#     if total <= 9:
+#         return True
+#     else:
+#         return False
 
 # docstring testing
 # testing domain
@@ -386,14 +386,27 @@ def express_checkout(product_to_quantity: dict[str, int]) -> bool:
 # order - non-decreasing, non-increasing
 # docstrings must include the four categories of testing
 # power function
+# doctests:
+# mystery(1, -2)
+# mystery(10, 1000000)
+# mystery(-5, 2)
+# mystery(0, 3)
+# 0 ** 0 = 1 in python console
+# ELLIPSIS: helo ...
+# if __name__ == '__main__':
+#   import doctest
+#   doctest.testmod(verbose=True, optionflags=doctest.ELLIPSIS)
 #
 #
 #
-#
-#
-#
-#
-#
-#
-#
-#
+
+def absolute_value(integer: int) -> int:
+    """
+    Return the absolute value of an integer.
+    >>> absolute_value(-108)
+    108
+    >>> absolute_value(-10 ** 6)
+    1000000
+
+    """
+    return abs(integer)

@@ -231,7 +231,53 @@ L = [[1, 2], [3, 4, 5]]
 res1 = L[0][0]
 res2 = L[res1]
 res3 = res2[-1]
-print(res3)
+# print(res3)
 
-for i in range(5):
-    print (i)
+class Solution:
+    def countNonDecreasingSubarrays(self, nums: list[int], k: int) -> int:
+        starts = deque()
+        ans, water, r = 0, 0, len(nums) - 1
+        for l in reversed(range(len(nums))):
+            x = nums[l]
+            while starts and nums[starts[0]] < x:
+                s = starts.popleft()
+                end = starts[0] if starts else r + 1
+                water += (x - nums[s]) * (end - s)
+            starts.appendleft(l)
+            while water > k:
+                water -= nums[starts[-1]] - nums[r]
+                if starts[-1] == r:
+                    starts.pop()
+                r -= 1
+            ans += r - l + 1
+        return ans
+
+
+class Solution:
+    def countNonDecreasingSubarrays(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        ans = 0
+        operations = 0
+        q = []
+        cnt = [[] for _ in range(n)]
+        pos = [n] * n
+        st = []
+        left = 0
+        for right in range(n):
+            while st and nums[right] >= nums[st[-1]]:
+                pos[st[-1]] = right
+                st.pop()
+            if st:
+                cnt[st[-1]].append(right)
+            st.append(right)
+            heapq.heappush(q, (-nums[right], right))
+            operations += max(0, -q[0][0] - nums[right])
+            while operations > k:
+                for i in cnt[left]:
+                    operations -= (nums[left] - nums[i]) * (
+                        min(pos[i], right + 1) - i)
+                left += 1
+            while q and q[0][1] < left:
+                heapq.heappop(q)
+            ans += right - left + 1
+        return ans

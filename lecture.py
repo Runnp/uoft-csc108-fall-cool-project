@@ -376,3 +376,24 @@ def express_checkout(product_to_quantity: dict[str, int]) -> bool:
         return True
     else:
         return False
+
+# docstring testing
+# testing domain
+# divide doc strings into meaningful categories
+# size
+# boundary - abs
+# dichotomy - vowels / non-vowels, even / odds
+# order - non-decreasing, non-increasing
+# docstrings must include the four categories of testing
+# power function
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

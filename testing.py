@@ -204,7 +204,7 @@ scores.clear()
 # for gate, platform in stops:
 #     print(gate, platform)
 
-# print(2 in [2, 5])
+# print(len(['x']) == 'x')
 
 def count_pairs(x, y):
     count = 0
@@ -214,4 +214,24 @@ def count_pairs(x, y):
                 count += 1
     return count
 
-print(count_pairs(6, 5))
+# print(count_pairs(6, 5))
+
+x = 0
+outer = 0
+inner = 0
+while outer < 3:
+    outer = outer + 1
+    while inner < 2:
+        inner = inner + 1
+        x = x + 1
+    x = x + 1
+# print(x)
+
+L = [[1, 2], [3, 4, 5]]
+res1 = L[0][0]
+res2 = L[res1]
+res3 = res2[-1]
+print(res3)
+
+for i in range(5):
+    print (i)

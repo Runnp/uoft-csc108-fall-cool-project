@@ -341,3 +341,23 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 # sqrt(math.pi)
 # math.sqrt(pi)
 # math.sqrt(math.pi) - True
+
+# There are two ways to call a method. Below are pairs of method calls; select the pair(s) that are equivalent to each other.
+#
+#
+#
+# '\nabc\t\t'.strip()
+# str.strip('\nabc\t\t') - True
+#
+# ['a', 'b', 'c'].count('b')
+# list.count('b', ['a', 'b', 'c']) - True
+#
+# list.append([1, 2, 3], 4)
+# [1, 2, 3].append(4)
+#
+# str.find('Canada is hockey. -Mike Weir', 'a', 2)
+# 'Canada is hockey. -Mike Weir'.find('a', 2) - True
+
+
+# object.method(argument)
+# Class.method(object, argument)

@@ -321,3 +321,23 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 #     Example:
 #     >>> palindrome_pairs(['abcd', 'dcba'])
 #     [(0, 1), (1, 0)]
+
+
+# Here is the output of help(math.sqrt):
+#
+# sqrt(...)
+#     sqrt(x)
+#
+#     Return the square root of x.
+#
+# Assume you have executed this code:
+# import math
+#
+#
+# Select the function call that will return the square root of pi.
+#
+#
+#
+# sqrt(math.pi)
+# math.sqrt(pi)
+# math.sqrt(math.pi) - True

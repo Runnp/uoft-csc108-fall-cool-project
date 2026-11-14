@@ -361,3 +361,47 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 
 # object.method(argument)
 # Class.method(object, argument)
+
+
+# Consider this class definition:
+#
+# class MyInt(int):
+#     """An integer class used for asking in-video quiz questions."""
+#
+# Some of the following English statements are true and some are false. Select the true one(s).
+#
+#
+# int is a subclass of MyInt.
+# MyInt inherits all of the features of int. - True
+# An object of type int is an object of type MyInt, but with more features.
+# Every method in class int can be called from an object of type MyInt. - True
+
+
+# class MyInt(int):
+#     """An integer class used for asking in-video quiz questions."""
+#
+# One of the following headers is not a valid method header for this class. Select it.
+#
+#
+# def is_larger(self, other):
+# def is_not_zero(): - True
+# def is_not_zero(self):
+#
+
+
+# Consider this class definition:
+#
+# class MyInt(int):
+#     """An integer class used for asking in-video quiz questions."""
+#
+#     def is_between(self, i, j):
+#         """Return True iff i <= self <= j
+#         """
+#
+# The type contract is missing above. Below are possible type contracts. Select the one(s) that are not valid for method is_between.
+#
+#
+# (int, MyInt, MyInt) -> bool - True
+# (MyInt, int, int) -> bool
+# (MyInt, MyInt, MyInt) -> bool
+# (int, int, int) -> bool - True

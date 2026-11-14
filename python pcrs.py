@@ -431,3 +431,31 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 # No e's are being counted. - True
 # Each vowel is only counted once, regardless of the number of occurrences of it. - True
 # The first a is not being counted.
+
+
+# class TestCollectUnderperformers(unittest.TestCase):
+#
+#     def test_low_threshold(self) -> None:
+#         """Test collect_underperformers with a threshold for which there
+#         are no underperformers."""
+#
+#
+#         actual = underperformers.collect_underperformers([4, 5, 6], 1)
+#         expected = []
+#         self.assertEqual(actual, expected)
+#
+#
+#     def test_high_threshold(self) -> None:
+#         """Test collect_underperformers with a threshold for which all items
+#         are underperformers."""
+# 		actual = underperformers.collect_underperformers([4, 5, 6], 8)
+#         expected = [4, 5, 6]
+#         self.assertEqual(actual, expected)
+#
+#     def test_mutation(self) -> None:
+#         """Confirm that collect_underperformers does not mutate the list
+#         it is given."""
+# 		actual = [4, 5, 8]
+#         underperformers.collect_underperformers(actual, 7)
+#         expected = [4, 5, 8]
+#         self.assertEqual(actual, expected)

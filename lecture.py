@@ -473,3 +473,52 @@ def absolute_value(integer: int) -> int:
 #     list_1_expected = []
 #     list_2_expected = [3, 2, 1]
 
+# Consider this code, which is in a file called words.py:
+#
+# def word_frequency(letter_to_words: dict[str, list[str]]) -> dict[str, int]:
+#     """Return a dictionary where the keys are the letters from letter_to_words,
+#     and the values are the number of words beginning with that letter in
+#     letter_to_words.
+#
+#     Precondition: the length of each list in letter_to_words is at least 1,
+#     each key in letter_to_words is a lowercase letter, and each value is a
+#     list of lowercase words beginning with that letter.
+#
+#     >>> d = {'a': ['apple'], 'b': ['beet', 'banana'], 'c': ['carrot', 'cucumber']}
+#     >>> expected = {'a': 1, 'b': 2, 'c': 2}
+#     >>> word_frequency(d) == expected
+#     True
+#     """
+#
+#
+# Consider this unittest method header:
+#
+# def test_word_frequency(self):
+#     """ A dictionary with several items."""
+#
+#     # Add body here.
+#
+#
+# Select the unittest method body(ies) that are equivalent to the doctest in the word_frequency docstring. You can assume that words has been imported.
+#
+#
+#
+#     d = {'a': ['apple'], 'b': ['beet', 'banana'], 'c': ['carrot', 'cucumber']}
+#     actual = words.word_frequency(d)
+#     expected = {'a': 1, 'b': 2, 'c': 2}
+#     self.assertEqual(actual, expected)
+#
+#     d = {'a': ['apple'], 'b': ['beet', 'banana'], 'c': ['carrot', 'cucumber']}
+#     actual = words.word_frequency(d)
+#     expected = {'c': 2, 'b': 2, 'a': 1}
+#     self.assertEqual(actual, expected)
+
+def test_absolute_value(self):
+    """
+    Test a positive vlue input
+    """
+    # test_value, expected = 0, 1
+    test_value, expected = -10, 10
+    result = absolute_value(test_value)
+    self.assertEqual(result, expected)
+

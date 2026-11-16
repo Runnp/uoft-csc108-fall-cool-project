@@ -410,3 +410,66 @@ def absolute_value(integer: int) -> int:
 
     """
     return abs(integer)
+
+# 16/11/26
+# Lecture
+# def test_
+# input_val = 1
+# expected = 0
+# self.assertEqual(expected, result)
+# MSG.format(input_val, expected, result))
+# unittest.main
+
+#
+# def remove_shared(L1: list, L2: list) -> None:
+#     """Remove items from L1 that are in both L1 and L2.
+#     """
+#
+#     for v in L2:
+#         if v in L1:
+#             L1.remove(v)
+#
+#
+# Here is a
+# unittest
+#
+#
+# class with a single test case for this function.The expected values are not shown.
+#
+#
+# import unittest
+#
+#
+# class TestRemoveShared(unittest.TestCase):
+#     """Tests for function duplicates.remove_shared."""
+#
+#     def test_full_overlap(self):
+#         """
+#         Test remove_shared where the two lists have the
+#         same items, but the order is different.
+#         """
+#
+#         list_1 = [1, 2, 3]
+#         list_2 = [3, 2, 1]
+#         list_1_expected =  # What is the expected value for list_1?
+#         list_2_expected =  # What is the expected value for list_2?
+#
+#         remove_shared(list_1, list_2)
+#
+#         self.assertEqual(list_1, list_1_expected)
+#         self.assertEqual(list_2, list_2_expected)
+#
+#
+# if __name__ == '__main__':
+#     unittest.main(exit=False)
+#
+# Select
+# the
+# correct
+# code
+# fragment
+# for this test case:
+#
+#     list_1_expected = []
+#     list_2_expected = [3, 2, 1]
+

@@ -281,7 +281,3 @@ res3 = res2[-1]
 #                 heapq.heappop(q)
 #             ans += right - left + 1
 #         return ans
-
-¡Hola! ¿Cómo estás? Espero que estés bien. Quiero contarte sobre mis fines de semana.
-
-Los sábados y domingos yo estudio solo en la universidad. Yo camino por el bosque porque me gusta mucho la naturaleza. A veces, yo voy al campus principal de la universidad de Toronto en autobús. Por la mañana, yo limpio mi dormitorio y mi escritorio. Estudio matemáticas, economía, y español. Yo tengo que hacer muchos ejercicios. También escribo poemas sobre mi vida. Por la noche, regreso a mi dormitorio. Ceno y veo clases de psicología. Después, veo películas francesas. Yo sé que estudio mucho y no viajó por la ciudad, pero creo que mis fines de semana son buenos para mi futuro.

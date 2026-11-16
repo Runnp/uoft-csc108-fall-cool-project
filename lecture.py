@@ -522,3 +522,37 @@ def test_absolute_value(self):
     result = absolute_value(test_value)
     self.assertEqual(result, expected)
 
+import unittest
+
+def indices(s: str, substr: str) -> list[int]:
+    """
+    Return the indices in <s> at which non-overlapping
+    copies of <substr> start. <substr> is non-empty.
+    """
+    i = 0
+    found = []
+    while i < len(s):
+        if s[i: i + len(substr)] == substr:
+            found.append(i)
+            i += len(substr)
+        else:
+            i += 1
+    return found
+
+
+MSG = 'Function: {}, input: {}, expected: {}, received: {}.'
+
+class TestIndices(unittest.TestCase):
+    """ The unit tests for the indices function. """
+
+    def test_overlap(self):
+        """ Tests an input string that contains the substring. """
+        # test_str, test_substr = 'Wooowowo', 'wo'
+        # expected = [0, 3, 5]
+        # test_str, test_substr = 'Qwertyuiop asdfghjkl zxcvbnm', 'fgh'
+        # expected = [14]
+        test_str, test_substr = 'Ser quyosh, Xur olkam, Bor jahon', 'o'
+        expected = [7, 11, 16, 24, 30]
+        result = indices(test_str, test_substr)
+        self.assertEqual(expected, result,
+            MSG.format('indices()', (test_str, test_substr), expected, result))

@@ -459,3 +459,27 @@ def palindrome_pairs(words: list[str]) -> list[tuple[int, int]]:
 #         underperformers.collect_underperformers(actual, 7)
 #         expected = [4, 5, 8]
 #         self.assertEqual(actual, expected)
+
+
+class TestMostPopular(unittest.TestCase):
+
+    def test_one_item(self) -> None:
+        """Test most_popular with a dictionary of length 1."""
+        company_to_placements = {'Super Shoes': [1, 2, 3]}
+        actual = running.most_popular(company_to_placements)
+        expected = ['Super Shoes']
+        self.assertEqual(actual, expected)
+
+    def test_mutation(self) -> None:
+        """Confirm that most_popular does not mutate the dict it is given.
+        """
+        actual = {'Super Shoes': [1, 2, 3],
+                  'Winter Boots': [2, 4],
+                  'Speedy Sneakers': [3, 2, 1]}
+
+    running.most_popular(actual)
+    expected = {'Super Shoes': [1, 2, 3],
+                'Winter Boots': [2, 4],
+                'Speedy Sneakers': [3, 2, 1, ]}
+
+    self.assertEqual(actual, expected)

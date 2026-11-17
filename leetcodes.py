@@ -521,33 +521,33 @@ class Solution:
             best = min(best, changes)
         return best
 
-    class Solution:
-        def minimumChanges(self, s: str, k: int) -> int:
-            n = len(s)
-            factors = [[] for _ in range(n + 1)]
+class Solution:
+    def minimumChanges(self, s: str, k: int) -> int:
+        n = len(s)
+        factors = [[] for _ in range(n + 1)]
 
-            for d in range(1, n // 2 + 1):
-                for m in range(d * 2, n + 1, d):
-                    factors[m].append(d)
-            cost = [[0] * n for _ in range(n)]
-            for l in range(n - 1):
-                for r in range(
-                        l + 1, n
-                ):  # Each substring must have length at least 2
-                    cost[l][r] = segmentCost(s, l, r - l + 1, factors)
+        for d in range(1, n // 2 + 1):
+            for m in range(d * 2, n + 1, d):
+                factors[m].append(d)
+        cost = [[0] * n for _ in range(n)]
+        for l in range(n - 1):
+            for r in range(
+                    l + 1, n
+            ):
 
-            prev = [cost[start][n - 1] for start in range(n)]  # The case seg = 1
-            for seg in range(
-                    2, k + 1
-            ):  # Increase the number of segments from 2 to k
-                cur = [n] * n
-                limit = n - 1 - 2 * (seg - 1)
-                for start in range(
-                        n - 2 * seg + 1
-                ):
-                    cur[start] = min(
-                        cost[start][e] + prev[e + 1]
-                        for e in range(start + 1, limit + 1)
-                    )
-                prev = cur
-            return prev[0]
+        prev = [cost[start][n - 1] for start in range(n)]  # The case seg = 1
+        for seg in range(
+                2, k + 1
+        ):
+            cur = [n] * n
+            limit = n - 1 - 2 * (seg - 1)
+            for start in range(
+                    n - 2 * seg + 1
+            ):
+                cur[start] = min(
+                    cost[start][e] + prev[e + 1]
+                    for e in range(start + 1, limit + 1)
+                )
+            prev = cur
+        return prev[0]
+

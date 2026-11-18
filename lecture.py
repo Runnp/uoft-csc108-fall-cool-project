@@ -556,3 +556,68 @@ class TestIndices(unittest.TestCase):
         result = indices(test_str, test_substr)
         self.assertEqual(expected, result,
             MSG.format('indices()', (test_str, test_substr), expected, result))
+
+
+# 18/11/26
+# Lecture
+# Regular Expression
+# \d for nums
+# \w, \s
+import re
+
+txt = '''143-614-3330, 556-732-3881, 680-964-1127, 568-769-3556,
+    099-887-1597, 081-997-3959, 842-502-6372, 406-648-1681,
+    416-475-8283, 259-778-2868, 105-776-7011, 912-576-5192,
+    018-087-9554, 975-845-6860, 702-619-1033, 326-382-3556,
+    416-294-6744, 957-135-4565, 667-624-1973, 603-418-9850'''
+
+x = re.findall("416-[0-9]{3}-[0-9]{4}", txt)
+print(x)
+
+x = re.findall(r"416-\d{3}-\d{4}", txt)
+print(x)
+# \w is for letters
+
+# pattern
+# \d\.\d.
+# text
+# pi is 3.14, e is 2.72, 3x14 is 42
+# pi is 3.14, e is 2.72, 3x14 is 42
+# re.findall(r'\d\.\d.', txt) gives ['3.14', '2.72']
+
+# pattern
+# \bis\b
+# text
+# this is what it is
+# this is what it is
+# re.findall(r'\bis\b', txt) gives ['is', 'is']
+
+# pattern
+# gr(a|e)y
+# text
+# gray grey groy
+# gray grey groy
+# re.findall(r'gr(a|e)y', txt) gives ['a', 'e']
+
+# pattern
+# M[iy]ke
+# text
+# Mike Miller, Mick Furrier, Myke Mason, Mike Baker
+# Mike Miller, Mick Furrier, Myke Mason, Mike Baker
+# re.findall(r'M[iy]ke', txt) gives ['Mike', 'Myke', 'Mike']
+import re
+
+def find_specific(txt: str) -> list[str]:
+    """ Return a list of matches where the string
+        begins with one 'a' followed by one or more 'b'
+    >>> find_specific("aaabbbabbacb")
+    ['abbb', 'abb']
+    >>> find_specific("abbbabaaa")
+    ['abbb', 'ab']
+    """
+    return re.findall(r"ab+", txt)
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+

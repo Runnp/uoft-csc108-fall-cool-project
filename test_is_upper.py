@@ -1,27 +1,23 @@
 import unittest
 import buggy_functions
 
-class Test_is_uppercase(unittest.TestCase):
 
+class TestIsUppercase(unittest.TestCase):
     def test_empty(self):
-        self.assertTrue(buggy_functions.is_uppercase(""), 
-            "Empty string")
-    
+        self.assertEqual(buggy_functions.is_uppercase(''), True, 'Empty string')
+
     def test_all_upper(self):
-        self.assertTrue(buggy_functions.is_uppercase("ABCDEF"),
-            "Uppercase string")
-    
+        self.assertEqual(buggy_functions.is_uppercase('ABCDEF'), True, 'All uppercase')
+
     def test_nonletter(self):
-        self.assertFalse(buggy_functions.is_uppercase("A123.,!A"),
-            "Non-alphabetic string")
-    
+        self.assertEqual(buggy_functions.is_uppercase('A123.,!A'), False, 'Nonletter')
+
     def test_all_lowercase(self):
-        self.assertFalse(buggy_functions.is_uppercase("abcdef"),
-            "Lowercase string")
+        self.assertEqual(buggy_functions.is_uppercase('abcdef'), False, 'All lowercase')
 
     def test_mixed(self):
-        self.assertFalse(buggy_functions.is_uppercase("AbCDEF"),
-            "Mixed-case string")
+        self.assertEqual(buggy_functions.is_uppercase('AbCDEF'), False, 'Mixed case')
 
 
-unittest.main(exit=False)
+if __name__ == '__main__':
+    unittest.main()

@@ -621,3 +621,28 @@ if __name__ == '__main__':
     import doctest
     doctest.testmod()
 
+import re
+
+def run_me(txt: str, my_regex: str) -> list[str]:
+    if len(my_regex) <= 6:
+        return re.findall(my_regex, txt)
+    return ["Fail"]
+
+def task2_helper(txt: str):
+    """ Create a regex that is no more than 6 characters long
+        that matches when a string, or substring, starts with
+        an 'a' followed by 0 or more numerals and ends
+        with the following string: 'CS'
+    >>> task2_helper("a998289CSC is great aaCS")
+    ['a998289CS', 'aCS']
+    >>> task2_helper("aCSC108")
+    ['aCS']
+    >>> task2_helper("")
+    []
+    """
+    your_regex = r"a\d*CS"
+    return run_me(txt, your_regex)
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

@@ -48,3 +48,6 @@ def odds_v2(L: List[object]) -> List[object]:
     for i in range(start, -1, -2):
         L.pop(i)
     return L
+
+
+# Here pop(i) modifies the list

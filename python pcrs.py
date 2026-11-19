@@ -532,3 +532,20 @@ class TestMostPopular(unittest.TestCase):
 # Binary search uses smaller lists.
 # Binary search uses a while loop with only one condition; linear search requires two subexpressions in the condition.
 # Binary search requires the list to be sorted.
+
+# If we count the loop condition as 1 step, each comparison as 1 step, each call on function print as 1 step, and each assignment statement as 1 step, in 1 iteration how many steps are there in the worst case?
+#
+# while i < len(L):
+#     if i % 2 == 0:
+#         print(i, 'is even')
+#     elif i % 3 == 0:
+#         print(i, 'is not even and is divisible by 3')
+#     elif i % 5 == 0:
+#         print(i, 'is not even nor divisible by 3, but is divisible by 5')
+#     i = i + 1
+#
+#
+# 1
+# 3
+# 5
+# 6 - True

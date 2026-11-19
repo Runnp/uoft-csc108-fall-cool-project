@@ -525,3 +525,10 @@ class TestMostPopular(unittest.TestCase):
 # 50,000 - True
 # 100,000
 # 50
+
+# What information allows the binary search algorithm to be so much faster than linear search?
+#
+#
+# Binary search uses smaller lists.
+# Binary search uses a while loop with only one condition; linear search requires two subexpressions in the condition.
+# Binary search requires the list to be sorted.

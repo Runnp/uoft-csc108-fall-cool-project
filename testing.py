@@ -289,3 +289,5 @@ for num in map(int, data.splitlines()):
     if num >= 10:
         res += num
 print(res)
+
+

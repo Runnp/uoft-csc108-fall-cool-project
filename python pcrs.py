@@ -591,3 +591,14 @@ class TestMostPopular(unittest.TestCase):
 #
 #
 # 38
+
+
+# Consider this list: [3, 3, 6, 7, 9, 4, 5]
+#
+#
+#
+# What is the maximum number of passes of selection sort that could have been completed?
+#
+#
+#
+# 2

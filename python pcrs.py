@@ -549,3 +549,21 @@ class TestMostPopular(unittest.TestCase):
 # 3
 # 5
 # 6 - True
+
+# Here is some profiling output. Select the function or method that was called the most times.
+#          110006 function calls in 0.054 seconds
+#    Ordered by: standard name
+#    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+#         1    0.002    0.002    0.054    0.054 :1()
+#         1    0.036    0.036    0.052    0.052 mod.py:1(gather_every_kth)
+#         1    0.005    0.005    0.005    0.005 mod.py:19(make_lists)
+#         1    0.000    0.000    0.054    0.054 {built-in method exec}
+#         1    0.000    0.000    0.000    0.000 {built-in method len}
+#    110000    0.012    0.000    0.012    0.000 {method 'append' of 'list' objects}
+#         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+#
+#
+# exec
+# append - True
+# gather_every_kth
+# make_lists

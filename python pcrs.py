@@ -567,3 +567,16 @@ class TestMostPopular(unittest.TestCase):
 # append - True
 # gather_every_kth
 # make_lists
+
+
+# Two passes of bubble sort have been completed on this list: [2, 3, 2, 4, 1, 5, 7]
+#
+#
+#
+# What will the list contents be after one more pass?
+#
+#
+# [1, 2, 2, 3, 4, 5, 7]
+# [2, 3, 2, 1, 4, 5, 7]
+# [2, 2, 3, 4, 1, 5, 7]
+# [2, 2, 3, 1, 4, 5, 7] - True

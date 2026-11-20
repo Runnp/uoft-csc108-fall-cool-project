@@ -580,3 +580,14 @@ class TestMostPopular(unittest.TestCase):
 # [2, 3, 2, 1, 4, 5, 7]
 # [2, 2, 3, 4, 1, 5, 7]
 # [2, 2, 3, 1, 4, 5, 7] - True
+
+
+# data = "10\n5\n8\n3\n12"
+# res = 0
+# for num in map(int, data.splitlines()):
+#     if num >= 10:
+#         res += num
+# print(res)
+#
+#
+# 38

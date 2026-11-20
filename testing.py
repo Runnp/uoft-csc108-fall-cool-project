@@ -281,3 +281,11 @@ res3 = res2[-1]
 #                 heapq.heappop(q)
 #             ans += right - left + 1
 #         return ans
+
+
+data = "10\n5\n8\n3\n12"
+res = 0
+for num in map(int, data.splitlines()):
+    if num >= 10:
+        res += num
+print(res)

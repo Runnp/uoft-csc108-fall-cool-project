@@ -602,3 +602,72 @@ class TestMostPopular(unittest.TestCase):
 #
 #
 # 2
+
+
+# Three passes of insertion sort have already been completed on this list:
+#
+# [2, 4, 5, 1, 3, 1]
+#
+#
+#
+# What will the list contents be after one more pass?
+#
+#
+# [1, 2, 4, 5, 3, 1]
+
+
+# You've been tasked as a data scientist to extract sub-sets of information,
+# often because the data is too big for processing. We need you to build
+# a function simplify that minimizes the larger input data set.
+def simplify(data: list, position_1: tuple,
+             position_2: tuple) -> list:
+    r1, c1 = position_1
+    r2, c2 = position_2
+
+    if (r1 < 0 or c1 < 0 or r2 < 0 or c2 < 0
+            or r1 > r2 or c1 > c2
+            or r2 >= len(data)):
+        return [['']]
+
+    result = []
+
+    for row in data[r1:r2 + 1]:
+        if c2 >= len(row):
+            return [['']]
+
+        result.append(row[c1:c2 + 1])
+
+    return result
+
+
+# L refers to a list. If there are k items in the list, roughly how many iterations are there?
+#
+# sum = 0
+# i = 0
+# while i < len(L):
+#     sum = sum + L[i]
+#     i = i + 2
+#
+#
+# 1
+# 2
+# 4
+# k/2 - True
+
+# Here is the function get_index_of_smallest with docstring and comments removed:
+#
+# def get_index_of_smallest(L, i):
+#     index_of_smallest = i
+#
+#     for j in range(i + 1, len(L)):
+#         if L[j] < L[index_of_smallest]:
+#             index_of_smallest = j
+#
+#     return index_of_smallest
+#
+#
+# For function get_index_of_smallest(L, i), is there a worst case and a best case?
+#
+#
+# Yes
+# No - True

@@ -483,3 +483,24 @@ class TestMostPopular(unittest.TestCase):
                 'Speedy Sneakers': [3, 2, 1, ]}
 
     self.assertEqual(actual, expected)
+
+# Consider this code:
+#
+# def f(L: list[int]) -> int:
+#
+#     total = 0
+#
+#     for item in L:
+#         for i in range(10):
+#             total = total + item * i # The step being considered.
+#
+#     return total
+#
+# How does the number of steps grow relative to len(L)?
+#
+#
+#
+# The number of steps is constant.
+# The number of steps grows logarithmically with respect to len(L).
+# The number of steps grows linearly with respect to len(L).
+# The number of steps grows quadratically with respect to len(L).

@@ -516,3 +516,12 @@ class TestMostPopular(unittest.TestCase):
 # linear_search(['a', 'a', 'a'], 'a')
 #
 # linear_search([], 0)
+
+
+# Given a list of 100,000 items, the binary search algorithm eliminates 50,000 items with one comparison. How many items would linear search have to examine to reach the same point?
+#
+#
+# 1
+# 50,000 - True
+# 100,000
+# 50

@@ -504,3 +504,15 @@ class TestMostPopular(unittest.TestCase):
 # The number of steps grows logarithmically with respect to len(L).
 # The number of steps grows linearly with respect to len(L).
 # The number of steps grows quadratically with respect to len(L).
+
+# Which of the following calls return(s) -1?
+#
+#
+#
+# linear_search([1, 2, 3], 1)
+#
+# linear_search([4, 2, -8], 8)
+#
+# linear_search(['a', 'a', 'a'], 'a')
+#
+# linear_search([], 0)

@@ -671,3 +671,22 @@ def simplify(data: list, position_1: tuple,
 #
 # Yes
 # No - True
+
+def insert(lst: list[int], v: int) -> None:
+    """Insert v into lst just before the rightmost item greater than v, or at
+    index 0 if no items are greater than v.
+
+    >>> my_list = [3, 10, 4, 2]
+    >>> insert(my_list, 5)
+    >>> my_list
+    [3, 5, 10, 4, 2]
+    >>> my_list = [5, 4, 2, 10]
+    >>> insert(my_list, 20)
+    >>> my_list
+    [20, 5, 4, 2, 10]
+    """
+    olm = 0
+    for n in range(len(lst)):
+        if lst[n] > v:
+            olm = n
+    lst.insert(olm, v)

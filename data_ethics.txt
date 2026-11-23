@@ -1,0 +1,7 @@
+1. Where the data came from. Who collected this data and for what purpose? If the Kaggle page does not say, state that.
+The data is collected by World Bank Open Data from government officials, ministries, statistical
+
+2. Who is in the data and who is not? What does the dataset describe, and who or what is missing or under-represented?
+If it describes people, were they likely aware the data was being collected?
+
+3. How the findings could be used. Give one reasonable use and one possible misuse of your findings or of the dataset.

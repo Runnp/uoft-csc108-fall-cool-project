@@ -690,3 +690,34 @@ def insert(lst: list[int], v: int) -> None:
         if lst[n] > v:
             olm = n
     lst.insert(olm, v)
+
+
+def bubble_up(L: list, start: int, end: int) -> None:
+    """Bubble up through L[start:end], swapping items that are out of order.
+
+    >>> L = [4, 3, 2, 1, 0]
+    >>> bubble_up(L, 0, 3)
+    >>> L
+    [3, 2, 1, 4, 0]
+    >>> L = [4, 3, 2, 1, 0]
+    >>> bubble_up(L, 2, 4)
+    >>> L
+    [4, 3, 1, 0, 2]
+    """
+
+    for i in range(start, end):
+        if L[i] > L[i + 1]:
+            L[i], L[i + 1] = L[i + 1], L[i]
+
+def bubble_down(L: list, start: int, end: int) -> None:
+    """Bubble down through L from indexes end through start, swapping items that
+    are out of place.
+
+    >>> L = [4, 3, 2, 1, 0]
+    >>> bubble_down(L, 1, 3)
+    >>> L
+    [4, 1, 3, 2, 0]
+    """
+    for i in range(end, start, -1):
+        if L[i] < L[i - 1]:
+            L[i], L[i - 1] = L[i - 1], L[i]

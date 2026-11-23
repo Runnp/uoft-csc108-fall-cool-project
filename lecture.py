@@ -646,3 +646,10 @@ def task2_helper(txt: str):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+
+
+def bubble_sort(L: list) -> None:
+    for iteration in range(len(L)):
+        for index in range(len(L)-1-iteration):
+            if L[index] > L[index + 1]:
+                L[index], L[index + 1] = L[index + 1], L[index]

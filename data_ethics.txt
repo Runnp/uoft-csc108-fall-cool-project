@@ -1,7 +1,16 @@
 1. Where the data came from. Who collected this data and for what purpose? If the Kaggle page does not say, state that.
-The data is collected by World Bank Open Data from government officials, ministries, statistical
+* My dataset is not from Kaggle. This dataset is from World Bank Open Data website. The reports are collected from
+government statistics of Uzbekistan. Its purpose is to share information about derivatives of Uzbekistan as a country
+with its economics, population, and other human life related data.
 
 2. Who is in the data and who is not? What does the dataset describe, and who or what is missing or under-represented?
 If it describes people, were they likely aware the data was being collected?
+* There are endless reasons to be skeptical about this dataset. I believe those empty cells can act as missing data.
+In years from 1960 to 1990s, when Uzbekistan gained its independence, the data demographics began to record outside of
+Soviet Union government structures. So it is unknown what happened those years. Mortality rate is also supposedly
+under-represented in many years.
 
 3. How the findings could be used. Give one reasonable use and one possible misuse of your findings or of the dataset.
+* I imagine applying these results while comparing to archived historical documents. To measure effective changes in
+ government organization. Also, modeling future data based on derivative of changed might be helpful for government
+ resource management purposes. While reviewing those numbers, I myself got to know a lot of new things about my country.
